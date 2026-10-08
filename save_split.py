@@ -1,20 +1,20 @@
 """
 save_split.py
 
-Re-creates the exact train/valid/test split that a trained RecBole
-checkpoint was trained and evaluated on, and dumps each partition to a
-plain TSV file using the ORIGINAL (external) user/item tokens -- not
-RecBole's internal integer ids -- so the files can be read by
-pandas/Excel or by any other tool outside RecBole.
+Builds the train/valid/test split for a dataset exactly as RecBole would
+for a given model + config, and dumps each partition to a plain TSV file
+using the ORIGINAL (external) user/item tokens -- not RecBole's internal
+integer ids -- so the files can be read by pandas/Excel or by any other
+tool outside RecBole.
 
-The split is rebuilt from the config stored inside the checkpoint
-(including `seed` and `eval_args`), via load_data_and_model, which seeds
-the random number generators before splitting exactly like run_recbole.py
-does. This guarantees the exported split is the one the model actually saw.
+The random number generators are seeded with the config's `seed` before
+splitting, exactly like run_recbole.py does, so the exported split is the
+one the model was trained on -- as long as you pass the same config file(s)
+you trained with.
 
 Usage:
-    python save_split.py \
-        --model_file saved/<dataset>-<model_name>-<timestamp>.pth \
+    python save_split.py --model BPR --dataset ml-100k \
+        --config_files recbole/config/BPR/ml-100k.yaml \
         --output_dir saved/splits
 """
 import argparse
@@ -22,7 +22,9 @@ import os
 
 import pandas as pd
 
-from recbole.quick_start import load_data_and_model
+from recbole.config import Config
+from recbole.data import create_dataset, data_preparation
+from recbole.utils import init_seed
 
 
 def dump_interactions(data_loader, dataset, out_path):
@@ -49,22 +51,29 @@ def dump_interactions(data_loader, dataset, out_path):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_file", type=str, required=True,
-                         help="path to a .pth checkpoint produced by run_recbole.py")
+    parser.add_argument("--model", type=str, default="BPR")
+    parser.add_argument("--dataset", type=str, required=True)
+    parser.add_argument("--config_files", type=str, default=None,
+                         help="space separated list of yaml files")
     parser.add_argument("--output_dir", type=str, default="saved/splits")
     args = parser.parse_args()
 
-    config, _, dataset, train_data, valid_data, test_data = load_data_and_model(
-        model_file=args.model_file
+    config_file_list = args.config_files.split(" ") if args.config_files else None
+    config = Config(
+        model=args.model,
+        dataset=args.dataset,
+        config_file_list=config_file_list,
     )
-    print(f'Split rebuilt from {args.model_file} '
-          f'(seed={config["seed"]}, eval_args={config["eval_args"]})')
+    # same seeding as run_recbole(): without it, order: RO shuffles differently on every run
+    init_seed(config["seed"], config["reproducibility"])
+
+    dataset = create_dataset(config)
+    train_data, valid_data, test_data = data_preparation(config, dataset)
 
     os.makedirs(args.output_dir, exist_ok=True)
-    name = config["dataset"]
-    dump_interactions(train_data, dataset, os.path.join(args.output_dir, f"{name}.train.tsv"))
-    dump_interactions(valid_data, dataset, os.path.join(args.output_dir, f"{name}.valid.tsv"))
-    dump_interactions(test_data, dataset, os.path.join(args.output_dir, f"{name}.test.tsv"))
+    dump_interactions(train_data, dataset, os.path.join(args.output_dir, f"{args.dataset}.train.tsv"))
+    dump_interactions(valid_data, dataset, os.path.join(args.output_dir, f"{args.dataset}.valid.tsv"))
+    dump_interactions(test_data, dataset, os.path.join(args.output_dir, f"{args.dataset}.test.tsv"))
 
 
 if __name__ == "__main__":
