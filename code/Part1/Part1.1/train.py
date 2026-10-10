@@ -19,4 +19,4 @@ subprocess.run("python run_recbole.py --model NeuMF --dataset ml-100k --config_f
 
 subprocess.run("python run_recbole.py --model NGCF --dataset ml-100k --config_files recbole/config/NGCF/ml-100k.yaml --checkpoint_dir=run_outputs/Part1/Part1.1/NGCF")
 
-subprocess.run("python run_recbole.py --model LightGCN --dataset ml-100k --config_files recbole/config/LightGCN/ml-100k.yaml --checkpoint_dir=run_outputs/Part1/Part1.1/LightGCN")
+subprocess.run("python run_recbole.py --model LightGCN --dataset ml-100k --config_files recbole/config/LightGCN/ml-100k.yaml --checkpoint_dir=run_outputs/Part1/Part1.1/LightGCN") 
