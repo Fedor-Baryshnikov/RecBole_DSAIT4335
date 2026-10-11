@@ -1,0 +1,847 @@
+  0%|          | 0/48 [00:00<?, ?trial/s, best loss=?]                                                      running parameters:
+  0%|          | 0/48 [00:00<?, ?trial/s, best loss=?]                                                      {'learning_rate': 0.0005, 'n_layers': 1, 'reg_weight': 0.0001}
+  0%|          | 0/48 [00:00<?, ?trial/s, best loss=?]command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:2202: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:209.)
+  new_data[k] = torch.LongTensor(value)
+
+10 Oct 14:54    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:54    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\model\general_recommender\lightgcn.py:126: UserWarning: torch.sparse.SparseTensor(indices, values, shape, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, shape, dtype=, device=). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_new.cpp:646.)
+  SparseL = torch.sparse.FloatTensor(i, data, torch.Size(L.shape))
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:54    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-54-29.pth[0m
+
+C:\Users\Barry\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\ray\train\_internal\session.py:683: UserWarning: `report` is meant to only be called inside a function that is executed by a Tuner or Trainer. Returning `None`.
+  warnings.warn(
+
+                                                      current best valid score: 0.2789
+  0%|          | 0/48 [00:08<?, ?trial/s, best loss=?]                                                      current best valid result:
+  0%|          | 0/48 [00:08<?, ?trial/s, best loss=?]                                                      OrderedDict({'recall@10': 0.1542, 'mrr@10': 0.2789, 'ndcg@10': 0.1557, 'hit@10': 0.614, 'precision@10': 0.1042})
+  0%|          | 0/48 [00:08<?, ?trial/s, best loss=?]                                                      current test result:
+  0%|          | 0/48 [00:08<?, ?trial/s, best loss=?]                                                      OrderedDict({'recall@10': 0.1722, 'mrr@10': 0.3326, 'ndcg@10': 0.1856, 'hit@10': 0.6681, 'precision@10': 0.1234})
+  0%|          | 0/48 [00:08<?, ?trial/s, best loss=?]  2%|2         | 1/48 [00:08<06:20,  8.09s/trial, best loss: -0.2789]                                                                     running parameters:
+  2%|2         | 1/48 [00:08<06:20,  8.09s/trial, best loss: -0.2789]                                                                     {'learning_rate': 0.001, 'n_layers': 4, 'reg_weight': 1e-05}
+  2%|2         | 1/48 [00:08<06:20,  8.09s/trial, best loss: -0.2789][33m10 Oct 14:54    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:54    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:54    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:54    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-54-37.pth[0m
+
+  4%|4         | 2/48 [00:16<06:11,  8.07s/trial, best loss: -0.2789]                                                                     running parameters:
+  4%|4         | 2/48 [00:16<06:11,  8.07s/trial, best loss: -0.2789]                                                                     {'learning_rate': 0.0005, 'n_layers': 1, 'reg_weight': 1e-05}
+  4%|4         | 2/48 [00:16<06:11,  8.07s/trial, best loss: -0.2789][33m10 Oct 14:54    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:54    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:54    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:54    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-54-46.pth[0m
+
+  6%|6         | 3/48 [00:22<05:32,  7.40s/trial, best loss: -0.2789]                                                                     running parameters:
+  6%|6         | 3/48 [00:22<05:32,  7.40s/trial, best loss: -0.2789]                                                                     {'learning_rate': 0.002, 'n_layers': 2, 'reg_weight': 0.001}
+  6%|6         | 3/48 [00:22<05:32,  7.40s/trial, best loss: -0.2789][33m10 Oct 14:54    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:54    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:54    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:54    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-54-52.pth[0m
+
+                                                                     current best valid score: 0.3103
+  6%|6         | 3/48 [00:29<05:32,  7.40s/trial, best loss: -0.2789]                                                                     current best valid result:
+  6%|6         | 3/48 [00:29<05:32,  7.40s/trial, best loss: -0.2789]                                                                     OrderedDict({'recall@10': 0.1663, 'mrr@10': 0.3103, 'ndcg@10': 0.1785, 'hit@10': 0.6479, 'precision@10': 0.1242})
+  6%|6         | 3/48 [00:29<05:32,  7.40s/trial, best loss: -0.2789]                                                                     current test result:
+  6%|6         | 3/48 [00:29<05:32,  7.40s/trial, best loss: -0.2789]                                                                     OrderedDict({'recall@10': 0.1894, 'mrr@10': 0.3795, 'ndcg@10': 0.218, 'hit@10': 0.684, 'precision@10': 0.1458})
+  6%|6         | 3/48 [00:29<05:32,  7.40s/trial, best loss: -0.2789]  8%|8         | 4/48 [00:29<05:22,  7.34s/trial, best loss: -0.3103]                                                                     running parameters:
+  8%|8         | 4/48 [00:29<05:22,  7.34s/trial, best loss: -0.3103]                                                                     {'learning_rate': 0.0005, 'n_layers': 4, 'reg_weight': 0.0001}
+  8%|8         | 4/48 [00:29<05:22,  7.34s/trial, best loss: -0.3103][33m10 Oct 14:54    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:54    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:54    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:55    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-54-59.pth[0m
+
+ 10%|#         | 5/48 [00:38<05:31,  7.70s/trial, best loss: -0.3103]                                                                     running parameters:
+ 10%|#         | 5/48 [00:38<05:31,  7.70s/trial, best loss: -0.3103]                                                                     {'learning_rate': 0.002, 'n_layers': 3, 'reg_weight': 0.0001}
+ 10%|#         | 5/48 [00:38<05:31,  7.70s/trial, best loss: -0.3103][33m10 Oct 14:55    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:55    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:55    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:55    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-55-08.pth[0m
+
+ 12%|#2        | 6/48 [00:46<05:23,  7.69s/trial, best loss: -0.3103]                                                                     running parameters:
+ 12%|#2        | 6/48 [00:46<05:23,  7.69s/trial, best loss: -0.3103]                                                                     {'learning_rate': 0.0005, 'n_layers': 4, 'reg_weight': 0.001}
+ 12%|#2        | 6/48 [00:46<05:23,  7.69s/trial, best loss: -0.3103][33m10 Oct 14:55    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:55    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:55    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:55    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-55-15.pth[0m
+
+ 15%|#4        | 7/48 [00:54<05:20,  7.81s/trial, best loss: -0.3103]                                                                     running parameters:
+ 15%|#4        | 7/48 [00:54<05:20,  7.81s/trial, best loss: -0.3103]                                                                     {'learning_rate': 0.001, 'n_layers': 1, 'reg_weight': 0.0001}
+ 15%|#4        | 7/48 [00:54<05:20,  7.81s/trial, best loss: -0.3103][33m10 Oct 14:55    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:55    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:55    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:55    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-55-23.pth[0m
+
+ 17%|#6        | 8/48 [01:00<04:55,  7.40s/trial, best loss: -0.3103]                                                                     running parameters:
+ 17%|#6        | 8/48 [01:00<04:55,  7.40s/trial, best loss: -0.3103]                                                                     {'learning_rate': 0.0005, 'n_layers': 1, 'reg_weight': 0.001}
+ 17%|#6        | 8/48 [01:00<04:55,  7.40s/trial, best loss: -0.3103][33m10 Oct 14:55    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:55    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:55    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:55    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-55-30.pth[0m
+
+ 19%|#8        | 9/48 [01:07<04:38,  7.13s/trial, best loss: -0.3103]                                                                     running parameters:
+ 19%|#8        | 9/48 [01:07<04:38,  7.13s/trial, best loss: -0.3103]                                                                     {'learning_rate': 0.001, 'n_layers': 3, 'reg_weight': 1e-05}
+ 19%|#8        | 9/48 [01:07<04:38,  7.13s/trial, best loss: -0.3103][33m10 Oct 14:55    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:55    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:55    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:55    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-55-36.pth[0m
+
+ 21%|##        | 10/48 [01:15<04:41,  7.40s/trial, best loss: -0.3103]                                                                      running parameters:
+ 21%|##        | 10/48 [01:15<04:41,  7.40s/trial, best loss: -0.3103]                                                                      {'learning_rate': 0.002, 'n_layers': 4, 'reg_weight': 0.001}
+ 21%|##        | 10/48 [01:15<04:41,  7.40s/trial, best loss: -0.3103][33m10 Oct 14:55    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:55    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:55    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:55    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-55-44.pth[0m
+
+ 23%|##2       | 11/48 [01:23<04:44,  7.70s/trial, best loss: -0.3103]                                                                      running parameters:
+ 23%|##2       | 11/48 [01:23<04:44,  7.70s/trial, best loss: -0.3103]                                                                      {'learning_rate': 0.001, 'n_layers': 1, 'reg_weight': 0.01}
+ 23%|##2       | 11/48 [01:23<04:44,  7.70s/trial, best loss: -0.3103][33m10 Oct 14:55    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:55    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:55    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:55    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-55-53.pth[0m
+
+ 25%|##5       | 12/48 [01:30<04:24,  7.34s/trial, best loss: -0.3103]                                                                      running parameters:
+ 25%|##5       | 12/48 [01:30<04:24,  7.34s/trial, best loss: -0.3103]                                                                      {'learning_rate': 0.0005, 'n_layers': 3, 'reg_weight': 0.001}
+ 25%|##5       | 12/48 [01:30<04:24,  7.34s/trial, best loss: -0.3103][33m10 Oct 14:55    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:55    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:55    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:56    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-55-59.pth[0m
+
+ 27%|##7       | 13/48 [01:37<04:18,  7.38s/trial, best loss: -0.3103]                                                                      running parameters:
+ 27%|##7       | 13/48 [01:37<04:18,  7.38s/trial, best loss: -0.3103]                                                                      {'learning_rate': 0.002, 'n_layers': 1, 'reg_weight': 1e-05}
+ 27%|##7       | 13/48 [01:37<04:18,  7.38s/trial, best loss: -0.3103][33m10 Oct 14:56    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:56    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:56    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:56    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-56-07.pth[0m
+
+                                                                      current best valid score: 0.3155
+ 27%|##7       | 13/48 [01:44<04:18,  7.38s/trial, best loss: -0.3103]                                                                      current best valid result:
+ 27%|##7       | 13/48 [01:44<04:18,  7.38s/trial, best loss: -0.3103]                                                                      OrderedDict({'recall@10': 0.1781, 'mrr@10': 0.3155, 'ndcg@10': 0.1902, 'hit@10': 0.6723, 'precision@10': 0.137})
+ 27%|##7       | 13/48 [01:44<04:18,  7.38s/trial, best loss: -0.3103]                                                                      current test result:
+ 27%|##7       | 13/48 [01:44<04:18,  7.38s/trial, best loss: -0.3103]                                                                      OrderedDict({'recall@10': 0.199, 'mrr@10': 0.4088, 'ndcg@10': 0.2362, 'hit@10': 0.7169, 'precision@10': 0.1598})
+ 27%|##7       | 13/48 [01:44<04:18,  7.38s/trial, best loss: -0.3103] 29%|##9       | 14/48 [01:44<04:02,  7.12s/trial, best loss: -0.3155]                                                                      running parameters:
+ 29%|##9       | 14/48 [01:44<04:02,  7.12s/trial, best loss: -0.3155]                                                                      {'learning_rate': 0.002, 'n_layers': 1, 'reg_weight': 0.0001}
+ 29%|##9       | 14/48 [01:44<04:02,  7.12s/trial, best loss: -0.3155][33m10 Oct 14:56    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:56    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:56    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:56    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-56-13.pth[0m
+
+ 31%|###1      | 15/48 [01:50<03:49,  6.95s/trial, best loss: -0.3155]                                                                      running parameters:
+ 31%|###1      | 15/48 [01:50<03:49,  6.95s/trial, best loss: -0.3155]                                                                      {'learning_rate': 0.002, 'n_layers': 3, 'reg_weight': 1e-05}
+ 31%|###1      | 15/48 [01:50<03:49,  6.95s/trial, best loss: -0.3155][33m10 Oct 14:56    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:56    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:56    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:56    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-56-20.pth[0m
+
+ 33%|###3      | 16/48 [01:58<03:52,  7.27s/trial, best loss: -0.3155]                                                                      running parameters:
+ 33%|###3      | 16/48 [01:58<03:52,  7.27s/trial, best loss: -0.3155]                                                                      {'learning_rate': 0.002, 'n_layers': 2, 'reg_weight': 0.0001}
+ 33%|###3      | 16/48 [01:58<03:52,  7.27s/trial, best loss: -0.3155][33m10 Oct 14:56    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:56    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:56    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:56    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-56-28.pth[0m
+
+ 35%|###5      | 17/48 [02:05<03:44,  7.24s/trial, best loss: -0.3155]                                                                      running parameters:
+ 35%|###5      | 17/48 [02:05<03:44,  7.24s/trial, best loss: -0.3155]                                                                      {'learning_rate': 0.002, 'n_layers': 1, 'reg_weight': 0.01}
+ 35%|###5      | 17/48 [02:05<03:44,  7.24s/trial, best loss: -0.3155][33m10 Oct 14:56    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:56    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:56    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:56    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-56-35.pth[0m
+
+                                                                      current best valid score: 0.3159
+ 35%|###5      | 17/48 [02:12<03:44,  7.24s/trial, best loss: -0.3155]                                                                      current best valid result:
+ 35%|###5      | 17/48 [02:12<03:44,  7.24s/trial, best loss: -0.3155]                                                                      OrderedDict({'recall@10': 0.1782, 'mrr@10': 0.3159, 'ndcg@10': 0.1902, 'hit@10': 0.6723, 'precision@10': 0.137})
+ 35%|###5      | 17/48 [02:12<03:44,  7.24s/trial, best loss: -0.3155]                                                                      current test result:
+ 35%|###5      | 17/48 [02:12<03:44,  7.24s/trial, best loss: -0.3155]                                                                      OrderedDict({'recall@10': 0.1988, 'mrr@10': 0.4089, 'ndcg@10': 0.236, 'hit@10': 0.7158, 'precision@10': 0.1595})
+ 35%|###5      | 17/48 [02:12<03:44,  7.24s/trial, best loss: -0.3155] 38%|###7      | 18/48 [02:12<03:31,  7.06s/trial, best loss: -0.3159]                                                                      running parameters:
+ 38%|###7      | 18/48 [02:12<03:31,  7.06s/trial, best loss: -0.3159]                                                                      {'learning_rate': 0.001, 'n_layers': 4, 'reg_weight': 0.001}
+ 38%|###7      | 18/48 [02:12<03:31,  7.06s/trial, best loss: -0.3159][33m10 Oct 14:56    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:56    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:56    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:56    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-56-42.pth[0m
+
+ 40%|###9      | 19/48 [02:20<03:34,  7.40s/trial, best loss: -0.3159]                                                                      running parameters:
+ 40%|###9      | 19/48 [02:20<03:34,  7.40s/trial, best loss: -0.3159]                                                                      {'learning_rate': 0.001, 'n_layers': 3, 'reg_weight': 0.0001}
+ 40%|###9      | 19/48 [02:20<03:34,  7.40s/trial, best loss: -0.3159][33m10 Oct 14:56    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:56    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:56    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:56    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-56-50.pth[0m
+
+ 42%|####1     | 20/48 [02:28<03:29,  7.47s/trial, best loss: -0.3159]                                                                      running parameters:
+ 42%|####1     | 20/48 [02:28<03:29,  7.47s/trial, best loss: -0.3159]                                                                      {'learning_rate': 0.0005, 'n_layers': 2, 'reg_weight': 0.01}
+ 42%|####1     | 20/48 [02:28<03:29,  7.47s/trial, best loss: -0.3159][33m10 Oct 14:56    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:56    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:56    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:57    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-56-58.pth[0m
+
+ 44%|####3     | 21/48 [02:36<03:25,  7.60s/trial, best loss: -0.3159]                                                                      running parameters:
+ 44%|####3     | 21/48 [02:36<03:25,  7.60s/trial, best loss: -0.3159]                                                                      {'learning_rate': 0.001, 'n_layers': 2, 'reg_weight': 1e-05}
+ 44%|####3     | 21/48 [02:36<03:25,  7.60s/trial, best loss: -0.3159][33m10 Oct 14:57    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:57    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:57    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:57    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-57-06.pth[0m
+
+ 46%|####5     | 22/48 [02:43<03:14,  7.50s/trial, best loss: -0.3159]                                                                      running parameters:
+ 46%|####5     | 22/48 [02:43<03:14,  7.50s/trial, best loss: -0.3159]                                                                      {'learning_rate': 0.002, 'n_layers': 2, 'reg_weight': 0.01}
+ 46%|####5     | 22/48 [02:43<03:14,  7.50s/trial, best loss: -0.3159][33m10 Oct 14:57    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:57    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:57    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:57    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-57-13.pth[0m
+
+ 48%|####7     | 23/48 [02:50<03:05,  7.42s/trial, best loss: -0.3159]                                                                      running parameters:
+ 48%|####7     | 23/48 [02:50<03:05,  7.42s/trial, best loss: -0.3159]                                                                      {'learning_rate': 0.001, 'n_layers': 2, 'reg_weight': 0.001}
+ 48%|####7     | 23/48 [02:50<03:05,  7.42s/trial, best loss: -0.3159][33m10 Oct 14:57    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:57    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:57    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:57    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-57-20.pth[0m
+
+ 50%|#####     | 24/48 [02:57<02:56,  7.35s/trial, best loss: -0.3159]                                                                      running parameters:
+ 50%|#####     | 24/48 [02:57<02:56,  7.35s/trial, best loss: -0.3159]                                                                      {'learning_rate': 0.0005, 'n_layers': 1, 'reg_weight': 0.01}
+ 50%|#####     | 24/48 [02:57<02:56,  7.35s/trial, best loss: -0.3159][33m10 Oct 14:57    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:57    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:57    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:57    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-57-27.pth[0m
+
+ 52%|#####2    | 25/48 [03:04<02:43,  7.12s/trial, best loss: -0.3159]                                                                      running parameters:
+ 52%|#####2    | 25/48 [03:04<02:43,  7.12s/trial, best loss: -0.3159]                                                                      {'learning_rate': 0.0005, 'n_layers': 2, 'reg_weight': 1e-05}
+ 52%|#####2    | 25/48 [03:04<02:43,  7.12s/trial, best loss: -0.3159][33m10 Oct 14:57    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:57    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:57    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:57    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-57-34.pth[0m
+
+ 54%|#####4    | 26/48 [03:11<02:36,  7.12s/trial, best loss: -0.3159]                                                                      running parameters:
+ 54%|#####4    | 26/48 [03:11<02:36,  7.12s/trial, best loss: -0.3159]                                                                      {'learning_rate': 0.002, 'n_layers': 4, 'reg_weight': 0.01}
+ 54%|#####4    | 26/48 [03:11<02:36,  7.12s/trial, best loss: -0.3159][33m10 Oct 14:57    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:57    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:57    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:57    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-57-41.pth[0m
+
+ 56%|#####6    | 27/48 [03:19<02:37,  7.48s/trial, best loss: -0.3159]                                                                      running parameters:
+ 56%|#####6    | 27/48 [03:19<02:37,  7.48s/trial, best loss: -0.3159]                                                                      {'learning_rate': 0.001, 'n_layers': 4, 'reg_weight': 0.01}
+ 56%|#####6    | 27/48 [03:19<02:37,  7.48s/trial, best loss: -0.3159][33m10 Oct 14:57    WARNING  command line args [--config_files recbole/config/LightGCN/ml-100k.yaml --params_file code/Part1/Part1.2/LightGCN.hyper --output_file run_outputs/Part1/Part1.2/LightGCN.result] will not be used in RecBole[0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=0, inplace=True)
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using 'df[col] = df[col].method(value)'.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+
+10 Oct 14:57    INFO  [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[4096][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}][0m
+
+10 Oct 14:57    INFO  [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[4096][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+
+C:\Users\Barry\RecBole_DSAIT4335\recbole\trainer\trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+
+10 Oct 14:57    INFO  Loading model structure and parameters from saved\ml-100k-LightGCN-Oct-10-2026_14-57-49.pth[0m
+
+10 Oct 14:57    INFO  Early stop triggered. Stopping iterations as condition is reach.[0m
+
+ 58%|#####8    | 28/48 [03:28<02:34,  7.71s/trial, best loss: -0.3159] 58%|#####8    | 28/48 [03:28<02:28,  7.43s/trial, best loss: -0.3159]
+best params:  {'learning_rate': 0.002, 'n_layers': 1, 'reg_weight': 0.01}
+best result: 
+{'model': 'LightGCN', 'best_valid_score': 0.3159, 'valid_score_bigger': True, 'best_valid_result': OrderedDict({'recall@10': 0.1782, 'mrr@10': 0.3159, 'ndcg@10': 0.1902, 'hit@10': 0.6723, 'precision@10': 0.137}), 'test_result': OrderedDict({'recall@10': 0.1988, 'mrr@10': 0.4089, 'ndcg@10': 0.236, 'hit@10': 0.7158, 'precision@10': 0.1595})}

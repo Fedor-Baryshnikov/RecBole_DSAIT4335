@@ -1,0 +1,48 @@
+alpha:0.0, embedding_size:64, learning_rate:0.001, reg_weights:[1e-7,1e-7]
+Valid result:
+recall@10 : 0.172    mrr@10 : 0.2979    ndcg@10 : 0.1772    hit@10 : 0.6649    precision@10 : 0.128
+Test result:
+recall@10 : 0.2015    mrr@10 : 0.3686    ndcg@10 : 0.2202    hit@10 : 0.7338    precision@10 : 0.161
+
+alpha:0.0, embedding_size:64, learning_rate:0.0001, reg_weights:[0,0]
+Valid result:
+recall@10 : 0.1213    mrr@10 : 0.2123    ndcg@10 : 0.1197    hit@10 : 0.5249    precision@10 : 0.0786
+Test result:
+recall@10 : 0.1242    mrr@10 : 0.2335    ndcg@10 : 0.1306    hit@10 : 0.5323    precision@10 : 0.0874
+
+alpha:0.0, embedding_size:64, learning_rate:0.001, reg_weights:[0,0]
+Valid result:
+recall@10 : 0.1744    mrr@10 : 0.3057    ndcg@10 : 0.1814    hit@10 : 0.6638    precision@10 : 0.1278
+Test result:
+recall@10 : 0.1928    mrr@10 : 0.3645    ndcg@10 : 0.2177    hit@10 : 0.72    precision@10 : 0.1587
+
+alpha:0.0, embedding_size:64, learning_rate:0.005, reg_weights:[0,0]
+Valid result:
+recall@10 : 0.1426    mrr@10 : 0.2728    ndcg@10 : 0.1519    hit@10 : 0.6098    precision@10 : 0.1144
+Test result:
+recall@10 : 0.1611    mrr@10 : 0.3137    ndcg@10 : 0.1823    hit@10 : 0.667    precision@10 : 0.1371
+
+alpha:0.0, embedding_size:64, learning_rate:0.0005, reg_weights:[1e-7,1e-7]
+Valid result:
+recall@10 : 0.1523    mrr@10 : 0.2657    ndcg@10 : 0.1546    hit@10 : 0.6119    precision@10 : 0.1066
+Test result:
+recall@10 : 0.1599    mrr@10 : 0.3145    ndcg@10 : 0.1808    hit@10 : 0.632    precision@10 : 0.1267
+
+alpha:0.0, embedding_size:64, learning_rate:0.0005, reg_weights:[0,0]
+Valid result:
+recall@10 : 0.1531    mrr@10 : 0.2674    ndcg@10 : 0.1555    hit@10 : 0.6172    precision@10 : 0.1073
+Test result:
+recall@10 : 0.1604    mrr@10 : 0.3145    ndcg@10 : 0.1807    hit@10 : 0.6331    precision@10 : 0.1266
+
+alpha:0.0, embedding_size:64, learning_rate:0.005, reg_weights:[1e-7,1e-7]
+Valid result:
+recall@10 : 0.1456    mrr@10 : 0.2835    ndcg@10 : 0.1585    hit@10 : 0.6299    precision@10 : 0.1185
+Test result:
+recall@10 : 0.1695    mrr@10 : 0.3232    ndcg@10 : 0.1938    hit@10 : 0.6702    precision@10 : 0.1466
+
+alpha:0.0, embedding_size:64, learning_rate:0.0001, reg_weights:[1e-7,1e-7]
+Valid result:
+recall@10 : 0.1213    mrr@10 : 0.2123    ndcg@10 : 0.1197    hit@10 : 0.5249    precision@10 : 0.0786
+Test result:
+recall@10 : 0.1242    mrr@10 : 0.2335    ndcg@10 : 0.1306    hit@10 : 0.5323    precision@10 : 0.0874
+
