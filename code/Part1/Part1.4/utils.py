@@ -108,6 +108,15 @@ def get_scores(model, data):
     return torch.cat(rows)
 
 
+def item_knn_scores(item_vectors, profiles, n_neighbors):
+    vectors = torch.nn.functional.normalize(item_vectors.float(), dim=1)
+    similarity = vectors @ vectors.T
+    similarity.fill_diagonal_(-torch.inf)
+    top = similarity.topk(n_neighbors, dim=1)
+    weights = torch.zeros_like(similarity).scatter_(1, top.indices, top.values.clamp(min=0))
+    return profiles @ weights.T
+
+
 def top_items(scores, split, n=K):
     scores = scores[split.users]
     scores[split.seen[split.users]] = -torch.inf
