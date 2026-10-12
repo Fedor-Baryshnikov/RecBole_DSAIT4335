@@ -1,0 +1,4 @@
+candidate,accuracy,sparse_users,diversity,total
+Cascade,1.0,1.0,1.5,3.5
+Switching,1.0,1.0,1.0,3.0
+FeatureAugmentation,1.0,1.0,0.5,2.5

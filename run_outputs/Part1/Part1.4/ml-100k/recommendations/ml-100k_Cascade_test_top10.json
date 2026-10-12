@@ -1,6 +1,7 @@
 {
   "dataset": "ml-100k",
   "model": "Cascade",
+  "split": "test",
   "k": 10,
   "seed": 2020,
   "eval_args": {

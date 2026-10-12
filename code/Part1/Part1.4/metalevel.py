@@ -50,7 +50,12 @@ def main():
     meta_scores = neighbor_scores(user_embedding(models[best_name]), data.train_matrix, args.n_neighbors)
     valid_rec = top_items(meta_scores, data.valid)
     test_rec = top_items(meta_scores, data.test)
-    report("MetaLevel", valid_rec, test_rec, scores, data, args.out_dir, details)
+
+    raw_scores = neighbor_scores(data.train_matrix, data.train_matrix, args.n_neighbors)
+    control = (top_items(raw_scores, data.valid), top_items(raw_scores, data.test))
+    raw_mrr = user_metrics(control[0], data.valid)["mrr"].mean().item()
+    details.append({"embedding": "raw_interactions", "valid_mrr@10": round(raw_mrr, 4), "selected": False})
+    report("MetaLevel", valid_rec, test_rec, scores, data, args.out_dir, details, control)
 
 
 if __name__ == "__main__":

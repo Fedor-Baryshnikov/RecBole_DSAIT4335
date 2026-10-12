@@ -44,7 +44,8 @@ def main():
         row["selected"] = (row["first"], row["weight"]) == best
 
     profiles = augment(scores[best[0]], data.train_matrix, args.n_pseudo, best[1])
-    report("FeatureAugmentation", recommend(profiles, data.valid), recommend(profiles, data.test), scores, data, args.out_dir, details)
+    control = (recommend(data.train_matrix, data.valid), recommend(data.train_matrix, data.test))
+    report("FeatureAugmentation", recommend(profiles, data.valid), recommend(profiles, data.test), scores, data, args.out_dir, details, control)
 
 
 if __name__ == "__main__":

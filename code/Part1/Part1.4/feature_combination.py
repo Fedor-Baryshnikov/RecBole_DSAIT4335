@@ -51,7 +51,8 @@ def main():
     for row in details[1:]:
         row["selected"] = row["weight"] == best_weight
 
-    report("FeatureCombination", recommend(best_weight, data.valid), recommend(best_weight, data.test), scores, data, args.out_dir, details)
+    control = (recommend(0.0, data.valid), recommend(0.0, data.test))
+    report("FeatureCombination", recommend(best_weight, data.valid), recommend(best_weight, data.test), scores, data, args.out_dir, details, control)
 
 
 if __name__ == "__main__":

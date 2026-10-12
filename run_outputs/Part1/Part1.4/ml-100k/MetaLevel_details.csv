@@ -3,3 +3,4 @@ BPR,0.3976,True
 LightGCN,0.3605,False
 NGCF,0.3824,False
 NeuMF,0.3935,False
+raw_interactions,0.3982,False

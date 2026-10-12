@@ -148,24 +148,25 @@ def make_row(label, kind, valid_rec, test_rec, data):
     return row
 
 
-def save_recommendations(name, rec, data, out_dir):
+def save_recommendations(name, split_name, rec, data, out_dir):
     dataset = data.dataset
-    users = dataset.id2token(dataset.uid_field, data.test.users.cpu().numpy())
+    users = dataset.id2token(dataset.uid_field, getattr(data, split_name).users.cpu().numpy())
     items = dataset.id2token(dataset.iid_field, rec.cpu().numpy())
     output = {
         "dataset": data.config["dataset"],
         "model": name,
+        "split": split_name,
         "k": K,
         "seed": data.config["seed"],
         "eval_args": data.config["eval_args"],
         "recommendations": {str(user): {"items": items[i].tolist()} for i, user in enumerate(users)},
     }
     os.makedirs(out_dir, exist_ok=True)
-    with open(os.path.join(out_dir, f"{data.config['dataset']}_{name}_top{K}.json"), "w") as f:
+    with open(os.path.join(out_dir, f"{data.config['dataset']}_{name}_{split_name}_top{K}.json"), "w") as f:
         json.dump(output, f, indent=2)
 
 
-def report(name, valid_rec, test_rec, scores, data, out_dir, details):
+def report(name, valid_rec, test_rec, scores, data, out_dir, details, control=None):
     rows = []
     for model_name, model_scores in scores.items():
         valid_base = top_items(model_scores, data.valid)
@@ -178,5 +179,10 @@ def report(name, valid_rec, test_rec, scores, data, out_dir, details):
     os.makedirs(out_dir, exist_ok=True)
     table.to_csv(os.path.join(out_dir, f"{name}_summary.csv"), index=False)
     pd.DataFrame(details).to_csv(os.path.join(out_dir, f"{name}_details.csv"), index=False)
-    save_recommendations(name, test_rec, data, os.path.join(out_dir, "recommendations"))
+    rec_dir = os.path.join(out_dir, "recommendations")
+    save_recommendations(name, "valid", valid_rec, data, rec_dir)
+    save_recommendations(name, "test", test_rec, data, rec_dir)
+    if control is not None:
+        save_recommendations(f"{name}_control", "valid", control[0], data, rec_dir)
+        save_recommendations(f"{name}_control", "test", control[1], data, rec_dir)
     print(table.to_string(index=False))
