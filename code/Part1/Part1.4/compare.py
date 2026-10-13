@@ -13,23 +13,9 @@ MONOLITHIC = ["FeatureCombination", "MetaLevel", "FeatureAugmentation"]
 ENSEMBLES = ["Switching", "Cascade", "FeatureAugmentation"]
 
 
-def bootstrap_ci(diff, n_boot=2000):
-    rng = np.random.RandomState(0)
-    index = rng.randint(0, len(diff), size=(n_boot, len(diff)))
-    return np.percentile(diff[index].mean(axis=1), [2.5, 97.5])
-
-
 def points(values):
-    result = {}
-    for name in values:
-        total = 0
-        for other in values:
-            if other == name:
-                continue
-            low, high = bootstrap_ci(values[name] - values[other])
-            total += 1 if low > 0 else 0 if high < 0 else 0.5
-        result[name] = total
-    return result
+    order = sorted(values, key=lambda name: values[name].mean())
+    return {name: rank + 1 for rank, name in enumerate(order)}
 
 
 def main():
@@ -89,7 +75,6 @@ def main():
                 if s == "valid" and metric == "ndcg":
                     gain[name] = diff
                 for users, mask in [("all", np.ones_like(sparse[s])), ("sparse", sparse[s])]:
-                    low, high = bootstrap_ci(diff[mask])
                     gain_rows.append({
                         "candidate": name,
                         "split": s,
@@ -98,8 +83,6 @@ def main():
                         "hybrid": round(float(hybrid_values[mask].mean()), 4),
                         "control": round(float(control_values[mask].mean()), 4),
                         "gain": round(float(diff[mask].mean()), 4),
-                        "gain_ci_low": round(float(low), 4),
-                        "gain_ci_high": round(float(high), 4),
                     })
 
     genres = torch.nn.functional.normalize(genre_matrix(data), dim=1)
