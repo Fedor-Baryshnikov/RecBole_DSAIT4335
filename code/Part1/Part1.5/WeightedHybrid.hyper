@@ -1,0 +1,2 @@
+REGULARIZATION choice [0.0,0.001,0.008,0.01,0.1]
+TOP_N choice [50,100,200]

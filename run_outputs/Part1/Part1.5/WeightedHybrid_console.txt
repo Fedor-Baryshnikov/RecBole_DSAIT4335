@@ -1,0 +1,76 @@
+E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=0, inplace=True)
+E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+Max value of user's history interaction records has reached 35.115864527629235% of the total.
+Pay Attetion!! the `split_to` is set to 0. If you catch a OMM error in this case, you need to increase it 
+			until the error disappears. For example, you can append it in the command line such as `--split_to=5`
+E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\recbole\model\general_recommender\lightgcn.py:126: UserWarning: torch.sparse.SparseTensor(indices, values, shape, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, shape, dtype=, device=). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_new.cpp:655.)
+  SparseL = torch.sparse.FloatTensor(i, data, torch.Size(L.shape))
+E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\recbole\model\general_recommender\ngcf.py:139: UserWarning: torch.sparse.SparseTensor(indices, values, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, dtype=, device=). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_new.cpp:643.)
+  return torch.sparse.FloatTensor(i, val)
+E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\.venv\Lib\site-packages\hyperopt\atpe.py:19: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+loading BPR
+loading EASE
+loading FISM
+loading ItemKNN
+loading LightGCN
+loading NGCF
+loading NeuMF
+loading SLIMElastic
+loading UserKNN
+  0%|          | 0/15 [00:00<?, ?trial/s, best loss=?]                                                      running parameters:
+  0%|          | 0/15 [00:00<?, ?trial/s, best loss=?]                                                      {'REGULARIZATION': 0.008, 'TOP_N': 100}
+  0%|          | 0/15 [00:00<?, ?trial/s, best loss=?]                                                      current best valid score: 0.4350
+  0%|          | 0/15 [00:00<?, ?trial/s, best loss=?]                                                      current best valid result:
+  0%|          | 0/15 [00:00<?, ?trial/s, best loss=?]                                                      {'recall@10': 0.24318279325962067, 'mrr@10': 0.4349895417690277, 'ndcg@10': 0.2630775570869446, 'hit@10': 0.7838982939720154, 'precision@10': 0.17881356179714203}
+  0%|          | 0/15 [00:00<?, ?trial/s, best loss=?]                                                      current test result:
+  0%|          | 0/15 [00:00<?, ?trial/s, best loss=?]                                                      {}
+  0%|          | 0/15 [00:00<?, ?trial/s, best loss=?]  7%|▋         | 1/15 [00:00<00:08,  1.62trial/s, best loss: -0.4349895417690277]                                                                                 running parameters:
+  7%|▋         | 1/15 [00:00<00:08,  1.62trial/s, best loss: -0.4349895417690277]                                                                                 {'REGULARIZATION': 0.01, 'TOP_N': 200}
+  7%|▋         | 1/15 [00:00<00:08,  1.62trial/s, best loss: -0.4349895417690277] 13%|█▎        | 2/15 [00:01<00:08,  1.57trial/s, best loss: -0.4349895417690277]                                                                                 running parameters:
+ 13%|█▎        | 2/15 [00:01<00:08,  1.57trial/s, best loss: -0.4349895417690277]                                                                                 {'REGULARIZATION': 0.0, 'TOP_N': 200}
+ 13%|█▎        | 2/15 [00:01<00:08,  1.57trial/s, best loss: -0.4349895417690277]                                                                                 current best valid score: 0.4376
+ 13%|█▎        | 2/15 [00:01<00:08,  1.57trial/s, best loss: -0.4349895417690277]                                                                                 current best valid result:
+ 13%|█▎        | 2/15 [00:01<00:08,  1.57trial/s, best loss: -0.4349895417690277]                                                                                 {'recall@10': 0.2506446838378906, 'mrr@10': 0.4376017451286316, 'ndcg@10': 0.2677769958972931, 'hit@10': 0.7881355881690979, 'precision@10': 0.18220339715480804}
+ 13%|█▎        | 2/15 [00:01<00:08,  1.57trial/s, best loss: -0.4349895417690277]                                                                                 current test result:
+ 13%|█▎        | 2/15 [00:01<00:08,  1.57trial/s, best loss: -0.4349895417690277]                                                                                 {}
+ 13%|█▎        | 2/15 [00:01<00:08,  1.57trial/s, best loss: -0.4349895417690277] 20%|██        | 3/15 [00:01<00:05,  2.07trial/s, best loss: -0.4376017451286316]                                                                                 running parameters:
+ 20%|██        | 3/15 [00:01<00:05,  2.07trial/s, best loss: -0.4376017451286316]                                                                                 {'REGULARIZATION': 0.008, 'TOP_N': 50}
+ 20%|██        | 3/15 [00:01<00:05,  2.07trial/s, best loss: -0.4376017451286316] 27%|██▋       | 4/15 [00:02<00:05,  1.93trial/s, best loss: -0.4376017451286316]                                                                                 running parameters:
+ 27%|██▋       | 4/15 [00:02<00:05,  1.93trial/s, best loss: -0.4376017451286316]                                                                                 {'REGULARIZATION': 0.001, 'TOP_N': 100}
+ 27%|██▋       | 4/15 [00:02<00:05,  1.93trial/s, best loss: -0.4376017451286316] 33%|███▎      | 5/15 [00:02<00:04,  2.32trial/s, best loss: -0.4376017451286316]                                                                                 running parameters:
+ 33%|███▎      | 5/15 [00:02<00:04,  2.32trial/s, best loss: -0.4376017451286316]                                                                                 {'REGULARIZATION': 0.01, 'TOP_N': 100}
+ 33%|███▎      | 5/15 [00:02<00:04,  2.32trial/s, best loss: -0.4376017451286316] 40%|████      | 6/15 [00:02<00:03,  2.64trial/s, best loss: -0.4376017451286316]                                                                                 running parameters:
+ 40%|████      | 6/15 [00:02<00:03,  2.64trial/s, best loss: -0.4376017451286316]                                                                                 {'REGULARIZATION': 0.1, 'TOP_N': 50}
+ 40%|████      | 6/15 [00:02<00:03,  2.64trial/s, best loss: -0.4376017451286316] 47%|████▋     | 7/15 [00:02<00:02,  2.87trial/s, best loss: -0.4376017451286316]                                                                                 running parameters:
+ 47%|████▋     | 7/15 [00:02<00:02,  2.87trial/s, best loss: -0.4376017451286316]                                                                                 {'REGULARIZATION': 0.008, 'TOP_N': 200}
+ 47%|████▋     | 7/15 [00:02<00:02,  2.87trial/s, best loss: -0.4376017451286316] 53%|█████▎    | 8/15 [00:03<00:02,  2.91trial/s, best loss: -0.4376017451286316]                                                                                 running parameters:
+ 53%|█████▎    | 8/15 [00:03<00:02,  2.91trial/s, best loss: -0.4376017451286316]                                                                                 {'REGULARIZATION': 0.1, 'TOP_N': 100}
+ 53%|█████▎    | 8/15 [00:03<00:02,  2.91trial/s, best loss: -0.4376017451286316] 60%|██████    | 9/15 [00:03<00:01,  3.09trial/s, best loss: -0.4376017451286316]                                                                                 running parameters:
+ 60%|██████    | 9/15 [00:03<00:01,  3.09trial/s, best loss: -0.4376017451286316]                                                                                 {'REGULARIZATION': 0.001, 'TOP_N': 50}
+ 60%|██████    | 9/15 [00:03<00:01,  3.09trial/s, best loss: -0.4376017451286316] 67%|██████▋   | 10/15 [00:03<00:01,  3.26trial/s, best loss: -0.4376017451286316]                                                                                  running parameters:
+ 67%|██████▋   | 10/15 [00:03<00:01,  3.26trial/s, best loss: -0.4376017451286316]                                                                                  {'REGULARIZATION': 0.001, 'TOP_N': 200}
+ 67%|██████▋   | 10/15 [00:03<00:01,  3.26trial/s, best loss: -0.4376017451286316] 73%|███████▎  | 11/15 [00:04<00:01,  3.17trial/s, best loss: -0.4376017451286316]                                                                                  running parameters:
+ 73%|███████▎  | 11/15 [00:04<00:01,  3.17trial/s, best loss: -0.4376017451286316]                                                                                  {'REGULARIZATION': 0.0, 'TOP_N': 50}
+ 73%|███████▎  | 11/15 [00:04<00:01,  3.17trial/s, best loss: -0.4376017451286316] 80%|████████  | 12/15 [00:04<00:00,  3.26trial/s, best loss: -0.4376017451286316]                                                                                  running parameters:
+ 80%|████████  | 12/15 [00:04<00:00,  3.26trial/s, best loss: -0.4376017451286316]                                                                                  {'REGULARIZATION': 0.1, 'TOP_N': 200}
+ 80%|████████  | 12/15 [00:04<00:00,  3.26trial/s, best loss: -0.4376017451286316] 87%|████████▋ | 13/15 [00:04<00:00,  3.23trial/s, best loss: -0.4376017451286316]                                                                                  running parameters:
+ 87%|████████▋ | 13/15 [00:04<00:00,  3.23trial/s, best loss: -0.4376017451286316]                                                                                  {'REGULARIZATION': 0.0, 'TOP_N': 100}
+ 87%|████████▋ | 13/15 [00:04<00:00,  3.23trial/s, best loss: -0.4376017451286316] 93%|█████████▎| 14/15 [00:05<00:00,  3.32trial/s, best loss: -0.4376017451286316]                                                                                  running parameters:
+ 93%|█████████▎| 14/15 [00:05<00:00,  3.32trial/s, best loss: -0.4376017451286316]                                                                                  {'REGULARIZATION': 0.01, 'TOP_N': 50}
+ 93%|█████████▎| 14/15 [00:05<00:00,  3.32trial/s, best loss: -0.4376017451286316]100%|██████████| 15/15 [00:05<00:00,  3.40trial/s, best loss: -0.4376017451286316]100%|██████████| 15/15 [00:05<00:00,  2.80trial/s, best loss: -0.4376017451286316]
+best params: {'REGULARIZATION': 0.0, 'TOP_N': 200}
+best validation result: {'recall@10': 0.2506446838378906, 'mrr@10': 0.4376017451286316, 'ndcg@10': 0.2677769958972931, 'hit@10': 0.7881355881690979, 'precision@10': 0.18220339715480804}
+saved: run_outputs\Part1\Part1.5\WeightedHybrid.best.json

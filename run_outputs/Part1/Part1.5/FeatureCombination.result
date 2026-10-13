@@ -1,0 +1,120 @@
+n_neighbors:100, weight:1.0
+Valid result:
+recall@10 : 0.15085625648498535    mrr@10 : 0.3317619860172272    ndcg@10 : 0.17382772266864777    hit@10 : 0.6440678238868713    precision@10 : 0.11779662221670151
+Test result:
+
+
+n_neighbors:400, weight:1.0
+Valid result:
+recall@10 : 0.1512852907180786    mrr@10 : 0.31146928668022156    ndcg@10 : 0.16864927113056183    hit@10 : 0.6377118825912476    precision@10 : 0.11546611040830612
+Test result:
+
+
+n_neighbors:400, weight:0.1
+Valid result:
+recall@10 : 0.21877369284629822    mrr@10 : 0.3909251391887665    ndcg@10 : 0.2324938327074051    hit@10 : 0.7521186470985413    precision@10 : 0.15572033822536469
+Test result:
+
+
+n_neighbors:100, weight:0.1
+Valid result:
+recall@10 : 0.20955964922904968    mrr@10 : 0.3668011724948883    ndcg@10 : 0.21889591217041016    hit@10 : 0.7182203531265259    precision@10 : 0.15444914996623993
+Test result:
+
+
+n_neighbors:200, weight:0.25
+Valid result:
+recall@10 : 0.21583670377731323    mrr@10 : 0.3836057484149933    ndcg@10 : 0.23194634914398193    hit@10 : 0.7309321761131287    precision@10 : 0.15932203829288483
+Test result:
+
+
+n_neighbors:100, weight:0.5
+Valid result:
+recall@10 : 0.2118091881275177    mrr@10 : 0.3520950973033905    ndcg@10 : 0.2154848575592041    hit@10 : 0.7351694703102112    precision@10 : 0.15275424718856812
+Test result:
+
+
+n_neighbors:50, weight:2.0
+Valid result:
+recall@10 : 0.08539608865976334    mrr@10 : 0.20961375534534454    ndcg@10 : 0.10233203321695328    hit@10 : 0.45974576473236084    precision@10 : 0.0713983103632927
+Test result:
+
+
+n_neighbors:200, weight:1.0
+Valid result:
+recall@10 : 0.15810973942279816    mrr@10 : 0.33216890692710876    ndcg@10 : 0.17987707257270813    hit@10 : 0.6525423526763916    precision@10 : 0.12330509722232819
+Test result:
+
+
+n_neighbors:50, weight:0.1
+Valid result:
+recall@10 : 0.2088879495859146    mrr@10 : 0.3674309253692627    ndcg@10 : 0.21807114779949188    hit@10 : 0.7309321761131287    precision@10 : 0.15211863815784454
+Test result:
+
+
+n_neighbors:50, weight:0.25
+Valid result:
+recall@10 : 0.2022494077682495    mrr@10 : 0.36442694067955017    ndcg@10 : 0.21580491960048676    hit@10 : 0.7245762944221497    precision@10 : 0.15296609699726105
+Test result:
+
+
+n_neighbors:400, weight:2.0
+Valid result:
+recall@10 : 0.09204169362783432    mrr@10 : 0.22336310148239136    ndcg@10 : 0.11000978946685791    hit@10 : 0.4661017060279846    precision@10 : 0.07754237204790115
+Test result:
+
+
+n_neighbors:200, weight:0.1
+Valid result:
+recall@10 : 0.21269403398036957    mrr@10 : 0.3735530972480774    ndcg@10 : 0.2267434000968933    hit@10 : 0.7351694703102112    precision@10 : 0.157627135515213
+Test result:
+
+
+n_neighbors:400, weight:0.5
+Valid result:
+recall@10 : 0.21459734439849854    mrr@10 : 0.387197345495224    ndcg@10 : 0.22808495163917542    hit@10 : 0.7521186470985413    precision@10 : 0.15211865305900574
+Test result:
+
+
+n_neighbors:100, weight:0.25
+Valid result:
+recall@10 : 0.21765843033790588    mrr@10 : 0.3733975291252136    ndcg@10 : 0.22604864835739136    hit@10 : 0.741525411605835    precision@10 : 0.16059322655200958
+Test result:
+
+
+n_neighbors:100, weight:2.0
+Valid result:
+recall@10 : 0.09348911046981812    mrr@10 : 0.22800560295581818    ndcg@10 : 0.1117866188287735    hit@10 : 0.47457626461982727    precision@10 : 0.07860170304775238
+Test result:
+
+
+n_neighbors:50, weight:1.0
+Valid result:
+recall@10 : 0.13347439467906952    mrr@10 : 0.3133617639541626    ndcg@10 : 0.15993322432041168    hit@10 : 0.625    precision@10 : 0.11016949266195297
+Test result:
+
+
+n_neighbors:50, weight:0.5
+Valid result:
+recall@10 : 0.1994209587574005    mrr@10 : 0.34525659680366516    ndcg@10 : 0.20813019573688507    hit@10 : 0.7182203531265259    precision@10 : 0.14872880280017853
+Test result:
+
+
+n_neighbors:200, weight:2.0
+Valid result:
+recall@10 : 0.08259440213441849    mrr@10 : 0.20979619026184082    ndcg@10 : 0.1021614596247673    hit@10 : 0.45338982343673706    precision@10 : 0.07266949862241745
+Test result:
+
+
+n_neighbors:200, weight:0.5
+Valid result:
+recall@10 : 0.21359805762767792    mrr@10 : 0.38778162002563477    ndcg@10 : 0.22774618864059448    hit@10 : 0.7372881174087524    precision@10 : 0.15487287938594818
+Test result:
+
+
+n_neighbors:400, weight:0.25
+Valid result:
+recall@10 : 0.2276899516582489    mrr@10 : 0.4032132625579834    ndcg@10 : 0.240805521607399    hit@10 : 0.741525411605835    precision@10 : 0.15847457945346832
+Test result:
+
+

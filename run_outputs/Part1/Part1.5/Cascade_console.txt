@@ -1,0 +1,56 @@
+E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=0, inplace=True)
+E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:650: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+Max value of user's history interaction records has reached 35.115864527629235% of the total.
+Pay Attetion!! the `split_to` is set to 0. If you catch a OMM error in this case, you need to increase it 
+			until the error disappears. For example, you can append it in the command line such as `--split_to=5`
+E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\recbole\model\general_recommender\lightgcn.py:126: UserWarning: torch.sparse.SparseTensor(indices, values, shape, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, shape, dtype=, device=). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_new.cpp:655.)
+  SparseL = torch.sparse.FloatTensor(i, data, torch.Size(L.shape))
+E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\recbole\model\general_recommender\ngcf.py:139: UserWarning: torch.sparse.SparseTensor(indices, values, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, dtype=, device=). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_new.cpp:643.)
+  return torch.sparse.FloatTensor(i, val)
+E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\.venv\Lib\site-packages\hyperopt\atpe.py:19: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+loading BPR
+loading EASE
+loading FISM
+loading ItemKNN
+loading LightGCN
+loading NGCF
+loading NeuMF
+loading SLIMElastic
+loading UserKNN
+  0%|          | 0/5 [00:00<?, ?trial/s, best loss=?]                                                     running parameters:
+  0%|          | 0/5 [00:00<?, ?trial/s, best loss=?]                                                     {'n_candidates': 200}
+  0%|          | 0/5 [00:00<?, ?trial/s, best loss=?]                                                     current best valid score: 0.4289
+  0%|          | 0/5 [00:00<?, ?trial/s, best loss=?]                                                     current best valid result:
+  0%|          | 0/5 [00:00<?, ?trial/s, best loss=?]                                                     {'recall@10': 0.240610733628273, 'mrr@10': 0.4289228618144989, 'ndcg@10': 0.25962966680526733, 'hit@10': 0.7711864113807678, 'precision@10': 0.17627118527889252}
+  0%|          | 0/5 [00:00<?, ?trial/s, best loss=?]                                                     current test result:
+  0%|          | 0/5 [00:00<?, ?trial/s, best loss=?]                                                     {}
+  0%|          | 0/5 [00:00<?, ?trial/s, best loss=?] 20%|██        | 1/5 [00:00<00:01,  2.98trial/s, best loss: -0.4289228618144989]                                                                                running parameters:
+ 20%|██        | 1/5 [00:00<00:01,  2.98trial/s, best loss: -0.4289228618144989]                                                                                {'n_candidates': 50}
+ 20%|██        | 1/5 [00:00<00:01,  2.98trial/s, best loss: -0.4289228618144989] 40%|████      | 2/5 [00:00<00:00,  3.36trial/s, best loss: -0.4289228618144989]                                                                                running parameters:
+ 40%|████      | 2/5 [00:00<00:00,  3.36trial/s, best loss: -0.4289228618144989]                                                                                {'n_candidates': 20}
+ 40%|████      | 2/5 [00:00<00:00,  3.36trial/s, best loss: -0.4289228618144989] 60%|██████    | 3/5 [00:00<00:00,  4.47trial/s, best loss: -0.4289228618144989]                                                                                running parameters:
+ 60%|██████    | 3/5 [00:00<00:00,  4.47trial/s, best loss: -0.4289228618144989]                                                                                {'n_candidates': 100}
+ 60%|██████    | 3/5 [00:00<00:00,  4.47trial/s, best loss: -0.4289228618144989]                                                                                current best valid score: 0.4319
+ 60%|██████    | 3/5 [00:01<00:00,  4.47trial/s, best loss: -0.4289228618144989]                                                                                current best valid result:
+ 60%|██████    | 3/5 [00:01<00:00,  4.47trial/s, best loss: -0.4289228618144989]                                                                                {'recall@10': 0.23877394199371338, 'mrr@10': 0.4318881332874298, 'ndcg@10': 0.2594674527645111, 'hit@10': 0.7754237055778503, 'precision@10': 0.17500001192092896}
+ 60%|██████    | 3/5 [00:01<00:00,  4.47trial/s, best loss: -0.4289228618144989]                                                                                current test result:
+ 60%|██████    | 3/5 [00:01<00:00,  4.47trial/s, best loss: -0.4289228618144989]                                                                                {}
+ 60%|██████    | 3/5 [00:01<00:00,  4.47trial/s, best loss: -0.4289228618144989] 80%|████████  | 4/5 [00:01<00:00,  4.11trial/s, best loss: -0.4318881332874298]                                                                                running parameters:
+ 80%|████████  | 4/5 [00:01<00:00,  4.11trial/s, best loss: -0.4318881332874298]                                                                                {'n_candidates': 400}
+ 80%|████████  | 4/5 [00:01<00:00,  4.11trial/s, best loss: -0.4318881332874298]100%|██████████| 5/5 [00:01<00:00,  3.14trial/s, best loss: -0.4318881332874298]100%|██████████| 5/5 [00:01<00:00,  3.41trial/s, best loss: -0.4318881332874298]
+best params: {'n_candidates': 100}
+best validation result: {'recall@10': 0.23877394199371338, 'mrr@10': 0.4318881332874298, 'ndcg@10': 0.2594674527645111, 'hit@10': 0.7754237055778503, 'precision@10': 0.17500001192092896}
+saved: run_outputs\Part1\Part1.5\Cascade.best.json
