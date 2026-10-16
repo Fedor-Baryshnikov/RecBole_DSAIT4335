@@ -1,30 +1,72 @@
-n_candidates:200
+model_names:BPR,EASE,LightGCN, n_candidates:100
+Valid result:
+recall@10 : 0.24090954661369324    mrr@10 : 0.4192418158054352    ndcg@10 : 0.256499320268631    hit@10 : 0.7754237055778503    precision@10 : 0.1762712001800537
+Test result:
+
+
+model_names:all, n_candidates:200
 Valid result:
 recall@10 : 0.240610733628273    mrr@10 : 0.4289228618144989    ndcg@10 : 0.25962966680526733    hit@10 : 0.7711864113807678    precision@10 : 0.17627118527889252
 Test result:
 
 
-n_candidates:50
+model_names:BPR,EASE,LightGCN, n_candidates:200
 Valid result:
-recall@10 : 0.2429855763912201    mrr@10 : 0.4270673394203186    ndcg@10 : 0.2609310746192932    hit@10 : 0.7775423526763916    precision@10 : 0.1786016970872879
+recall@10 : 0.2395598143339157    mrr@10 : 0.4215252697467804    ndcg@10 : 0.2569062411785126    hit@10 : 0.7754237055778503    precision@10 : 0.1769067794084549
 Test result:
 
 
-n_candidates:20
+model_names:ItemKNN,LightGCN, n_candidates:50
 Valid result:
-recall@10 : 0.23049087822437286    mrr@10 : 0.40765905380249023    ndcg@10 : 0.2455337643623352    hit@10 : 0.7754237055778503    precision@10 : 0.17033898830413818
+recall@10 : 0.2072286605834961    mrr@10 : 0.38205790519714355    ndcg@10 : 0.22560979425907135    hit@10 : 0.7245762944221497    precision@10 : 0.15063560009002686
 Test result:
 
 
-n_candidates:100
+model_names:ItemKNN,LightGCN, n_candidates:200
+Valid result:
+recall@10 : 0.21199092268943787    mrr@10 : 0.3845532238483429    ndcg@10 : 0.2285238802433014    hit@10 : 0.7394067645072937    precision@10 : 0.15317797660827637
+Test result:
+
+
+model_names:all, n_candidates:100
 Valid result:
 recall@10 : 0.23877394199371338    mrr@10 : 0.4318881332874298    ndcg@10 : 0.2594674527645111    hit@10 : 0.7754237055778503    precision@10 : 0.17500001192092896
 Test result:
 
 
-n_candidates:400
+model_names:BPR,EASE, n_candidates:50
 Valid result:
-recall@10 : 0.24091723561286926    mrr@10 : 0.42899009585380554    ndcg@10 : 0.25966259837150574    hit@10 : 0.7711864113807678    precision@10 : 0.1760593205690384
+recall@10 : 0.24284766614437103    mrr@10 : 0.42044487595558167    ndcg@10 : 0.2583949565887451    hit@10 : 0.7838982939720154    precision@10 : 0.17966102063655853
+Test result:
+
+
+model_names:BPR,EASE,LightGCN, n_candidates:50
+Valid result:
+recall@10 : 0.24284766614437103    mrr@10 : 0.42044487595558167    ndcg@10 : 0.2583949565887451    hit@10 : 0.7838982939720154    precision@10 : 0.17966102063655853
+Test result:
+
+
+model_names:BPR,EASE, n_candidates:100
+Valid result:
+recall@10 : 0.24068036675453186    mrr@10 : 0.4224407970905304    ndcg@10 : 0.25756803154945374    hit@10 : 0.7754237055778503    precision@10 : 0.17733050882816315
+Test result:
+
+
+model_names:ItemKNN,LightGCN, n_candidates:100
+Valid result:
+recall@10 : 0.20993010699748993    mrr@10 : 0.3842707574367523    ndcg@10 : 0.22782528400421143    hit@10 : 0.7309321761131287    precision@10 : 0.1519067883491516
+Test result:
+
+
+model_names:BPR,EASE, n_candidates:200
+Valid result:
+recall@10 : 0.24099242687225342    mrr@10 : 0.42196914553642273    ndcg@10 : 0.25777795910835266    hit@10 : 0.7754237055778503    precision@10 : 0.17754237353801727
+Test result:
+
+
+model_names:all, n_candidates:50
+Valid result:
+recall@10 : 0.2429855763912201    mrr@10 : 0.4270673394203186    ndcg@10 : 0.2609310746192932    hit@10 : 0.7775423526763916    precision@10 : 0.1786016970872879
 Test result:
 
 

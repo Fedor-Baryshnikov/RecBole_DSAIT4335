@@ -1,162 +1,648 @@
-n_neighbors:400, n_pseudo:50, weight:0.5
+model_names:BPR, n_neighbors:400, n_pseudo:50, weight:0.5
 Valid result:
-recall@10 : 0.1870621293783188    mrr@10 : 0.35739338397979736    ndcg@10 : 0.2041955441236496    hit@10 : 0.6885592937469482    precision@10 : 0.13919492065906525
+recall@10 : 0.18923182785511017    mrr@10 : 0.3761189877986908    ndcg@10 : 0.21219737827777863    hit@10 : 0.6991525292396545    precision@10 : 0.14576271176338196
 Test result:
 
 
-n_neighbors:100, n_pseudo:20, weight:1.0
+model_names:LightGCN, n_neighbors:100, n_pseudo:20, weight:1.0
 Valid result:
-recall@10 : 0.18833912909030914    mrr@10 : 0.3367340862751007    ndcg@10 : 0.20346561074256897    hit@10 : 0.6991525292396545    precision@10 : 0.14915254712104797
+recall@10 : 0.15856654942035675    mrr@10 : 0.32256442308425903    ndcg@10 : 0.1769409477710724    hit@10 : 0.6377118825912476    precision@10 : 0.12627120316028595
 Test result:
 
 
-n_neighbors:50, n_pseudo:50, weight:1.0
+model_names:all, n_neighbors:50, n_pseudo:50, weight:1.0
 Valid result:
 recall@10 : 0.1470264196395874    mrr@10 : 0.2968539893627167    ndcg@10 : 0.16478665173053741    hit@10 : 0.6313559412956238    precision@10 : 0.12245763093233109
 Test result:
 
 
-n_neighbors:400, n_pseudo:20, weight:0.25
+model_names:BPR, n_neighbors:400, n_pseudo:20, weight:0.25
 Valid result:
-recall@10 : 0.20347779989242554    mrr@10 : 0.3893899619579315    ndcg@10 : 0.22620925307273865    hit@10 : 0.7288135886192322    precision@10 : 0.15084746479988098
+recall@10 : 0.20267051458358765    mrr@10 : 0.3949606716632843    ndcg@10 : 0.22644656896591187    hit@10 : 0.7266949415206909    precision@10 : 0.15063560009002686
 Test result:
 
 
-n_neighbors:50, n_pseudo:50, weight:0.5
+model_names:EASE, n_neighbors:400, n_pseudo:50, weight:0.5
 Valid result:
-recall@10 : 0.16883423924446106    mrr@10 : 0.3147716522216797    ndcg@10 : 0.17992576956748962    hit@10 : 0.680084764957428    precision@10 : 0.13326270878314972
+recall@10 : 0.1870621293783188    mrr@10 : 0.35739338397979736    ndcg@10 : 0.2041955441236496    hit@10 : 0.6885592937469482    precision@10 : 0.13919492065906525
 Test result:
 
 
-n_neighbors:100, n_pseudo:50, weight:0.5
+model_names:LightGCN, n_neighbors:100, n_pseudo:50, weight:0.5
 Valid result:
-recall@10 : 0.16405202448368073    mrr@10 : 0.31217798590660095    ndcg@10 : 0.177201509475708    hit@10 : 0.6631355881690979    precision@10 : 0.13199153542518616
+recall@10 : 0.13475368916988373    mrr@10 : 0.3010055124759674    ndcg@10 : 0.16114681959152222    hit@10 : 0.6101694703102112    precision@10 : 0.12055084854364395
 Test result:
 
 
-n_neighbors:100, n_pseudo:5, weight:0.25
+model_names:LightGCN, n_neighbors:100, n_pseudo:5, weight:0.25
 Valid result:
-recall@10 : 0.20921523869037628    mrr@10 : 0.38721248507499695    ndcg@10 : 0.2270996868610382    hit@10 : 0.7309321761131287    precision@10 : 0.15762712061405182
+recall@10 : 0.20366312563419342    mrr@10 : 0.3725837469100952    ndcg@10 : 0.22084765136241913    hit@10 : 0.7203390002250671    precision@10 : 0.1525423675775528
 Test result:
 
 
-n_neighbors:400, n_pseudo:50, weight:1.0
+model_names:BPR, n_neighbors:400, n_pseudo:50, weight:1.0
 Valid result:
 recall@10 : 0.17834603786468506    mrr@10 : 0.34079232811927795    ndcg@10 : 0.19250737130641937    hit@10 : 0.6864407062530518    precision@10 : 0.14110170304775238
 Test result:
 
 
-n_neighbors:50, n_pseudo:5, weight:0.25
+model_names:LightGCN, n_neighbors:50, n_pseudo:5, weight:0.25
 Valid result:
-recall@10 : 0.20994611084461212    mrr@10 : 0.36406630277633667    ndcg@10 : 0.2207249402999878    hit@10 : 0.7372881174087524    precision@10 : 0.1565677970647812
+recall@10 : 0.20856353640556335    mrr@10 : 0.3569023907184601    ndcg@10 : 0.2182627022266388    hit@10 : 0.7245762944221497    precision@10 : 0.15656781196594238
 Test result:
 
 
-n_neighbors:100, n_pseudo:20, weight:0.25
+model_names:BPR, n_neighbors:100, n_pseudo:20, weight:0.25
 Valid result:
 recall@10 : 0.20458835363388062    mrr@10 : 0.3680824339389801    ndcg@10 : 0.22042728960514069    hit@10 : 0.7055084705352783    precision@10 : 0.15614406764507294
 Test result:
 
 
-n_neighbors:50, n_pseudo:20, weight:1.0
+model_names:BPR, n_neighbors:50, n_pseudo:20, weight:1.0
 Valid result:
-recall@10 : 0.1891874074935913    mrr@10 : 0.3281089961528778    ndcg@10 : 0.19875341653823853    hit@10 : 0.6991525292396545    precision@10 : 0.14788135886192322
+recall@10 : 0.17911389470100403    mrr@10 : 0.3401029109954834    ndcg@10 : 0.19810041785240173    hit@10 : 0.680084764957428    precision@10 : 0.14427967369556427
 Test result:
 
 
-n_neighbors:400, n_pseudo:5, weight:0.25
+model_names:LightGCN, n_neighbors:400, n_pseudo:5, weight:0.25
+Valid result:
+recall@10 : 0.20797370374202728    mrr@10 : 0.3930639624595642    ndcg@10 : 0.2295868694782257    hit@10 : 0.741525411605835    precision@10 : 0.1533898264169693
+Test result:
+
+
+model_names:EASE, n_neighbors:100, n_pseudo:50, weight:1.0
+Valid result:
+recall@10 : 0.14620690047740936    mrr@10 : 0.2788892090320587    ndcg@10 : 0.15966132283210754    hit@10 : 0.6207627058029175    precision@10 : 0.12394067645072937
+Test result:
+
+
+model_names:LightGCN, n_neighbors:100, n_pseudo:20, weight:0.25
+Valid result:
+recall@10 : 0.18713892996311188    mrr@10 : 0.3591412603855133    ndcg@10 : 0.206697478890419    hit@10 : 0.694915235042572    precision@10 : 0.14597457647323608
+Test result:
+
+
+model_names:LightGCN, n_neighbors:50, n_pseudo:20, weight:0.25
+Valid result:
+recall@10 : 0.17481286823749542    mrr@10 : 0.34558868408203125    ndcg@10 : 0.19279101490974426    hit@10 : 0.6885592937469482    precision@10 : 0.13834746181964874
+Test result:
+
+
+model_names:all, n_neighbors:400, n_pseudo:20, weight:0.25
+Valid result:
+recall@10 : 0.20347779989242554    mrr@10 : 0.3893899619579315    ndcg@10 : 0.22620925307273865    hit@10 : 0.7288135886192322    precision@10 : 0.15084746479988098
+Test result:
+
+
+model_names:EASE, n_neighbors:400, n_pseudo:5, weight:1.0
+Valid result:
+recall@10 : 0.20232225954532623    mrr@10 : 0.39658498764038086    ndcg@10 : 0.22745060920715332    hit@10 : 0.7351694703102112    precision@10 : 0.15275424718856812
+Test result:
+
+
+model_names:all, n_neighbors:400, n_pseudo:5, weight:0.25
 Valid result:
 recall@10 : 0.2103707194328308    mrr@10 : 0.3967220187187195    ndcg@10 : 0.23116238415241241    hit@10 : 0.7372881174087524    precision@10 : 0.1519068032503128
 Test result:
 
 
-n_neighbors:50, n_pseudo:5, weight:0.5
-Valid result:
-recall@10 : 0.20929132401943207    mrr@10 : 0.37082910537719727    ndcg@10 : 0.22354137897491455    hit@10 : 0.7224576473236084    precision@10 : 0.15720337629318237
-Test result:
-
-
-n_neighbors:100, n_pseudo:50, weight:0.25
-Valid result:
-recall@10 : 0.17979614436626434    mrr@10 : 0.33832311630249023    ndcg@10 : 0.19769033789634705    hit@10 : 0.6822034120559692    precision@10 : 0.14237289130687714
-Test result:
-
-
-n_neighbors:50, n_pseudo:20, weight:0.25
-Valid result:
-recall@10 : 0.19571633636951447    mrr@10 : 0.35818031430244446    ndcg@10 : 0.21111080050468445    hit@10 : 0.7139830589294434    precision@10 : 0.15190677344799042
-Test result:
-
-
-n_neighbors:100, n_pseudo:5, weight:1.0
-Valid result:
-recall@10 : 0.2031596451997757    mrr@10 : 0.3875117599964142    ndcg@10 : 0.22693537175655365    hit@10 : 0.7457627058029175    precision@10 : 0.15614408254623413
-Test result:
-
-
-n_neighbors:400, n_pseudo:5, weight:1.0
-Valid result:
-recall@10 : 0.20184309780597687    mrr@10 : 0.3885340988636017    ndcg@10 : 0.22579453885555267    hit@10 : 0.7224576473236084    precision@10 : 0.15127119421958923
-Test result:
-
-
-n_neighbors:400, n_pseudo:20, weight:1.0
-Valid result:
-recall@10 : 0.19336090981960297    mrr@10 : 0.37894389033317566    ndcg@10 : 0.21687492728233337    hit@10 : 0.7161017060279846    precision@10 : 0.15000000596046448
-Test result:
-
-
-n_neighbors:50, n_pseudo:50, weight:0.25
+model_names:BPR, n_neighbors:50, n_pseudo:50, weight:0.25
 Valid result:
 recall@10 : 0.19078338146209717    mrr@10 : 0.35573965311050415    ndcg@10 : 0.20533432066440582    hit@10 : 0.7097457647323608    precision@10 : 0.14724576473236084
 Test result:
 
 
-n_neighbors:100, n_pseudo:20, weight:0.5
+model_names:EASE, n_neighbors:50, n_pseudo:20, weight:0.25
+Valid result:
+recall@10 : 0.19443725049495697    mrr@10 : 0.3475543260574341    ndcg@10 : 0.2041553258895874    hit@10 : 0.7076271176338196    precision@10 : 0.1493644118309021
+Test result:
+
+
+model_names:all, n_neighbors:50, n_pseudo:5, weight:0.5
+Valid result:
+recall@10 : 0.20929132401943207    mrr@10 : 0.37082910537719727    ndcg@10 : 0.22354137897491455    hit@10 : 0.7224576473236084    precision@10 : 0.15720337629318237
+Test result:
+
+
+model_names:BPR, n_neighbors:400, n_pseudo:5, weight:0.25
+Valid result:
+recall@10 : 0.21067695319652557    mrr@10 : 0.3975071907043457    ndcg@10 : 0.2321086823940277    hit@10 : 0.741525411605835    precision@10 : 0.15233053267002106
+Test result:
+
+
+model_names:all, n_neighbors:100, n_pseudo:20, weight:0.5
 Valid result:
 recall@10 : 0.19204789400100708    mrr@10 : 0.3568115830421448    ndcg@10 : 0.2049734741449356    hit@10 : 0.7097457647323608    precision@10 : 0.1470339000225067
 Test result:
 
 
-n_neighbors:100, n_pseudo:50, weight:1.0
+model_names:EASE, n_neighbors:50, n_pseudo:5, weight:0.25
 Valid result:
-recall@10 : 0.15057328343391418    mrr@10 : 0.2910260260105133    ndcg@10 : 0.1629142165184021    hit@10 : 0.6525423526763916    precision@10 : 0.1250000149011612
+recall@10 : 0.20522886514663696    mrr@10 : 0.36593523621559143    ndcg@10 : 0.21908818185329437    hit@10 : 0.7288135886192322    precision@10 : 0.15487289428710938
 Test result:
 
 
-n_neighbors:400, n_pseudo:50, weight:0.25
+model_names:LightGCN, n_neighbors:50, n_pseudo:5, weight:0.5
 Valid result:
-recall@10 : 0.20036624372005463    mrr@10 : 0.3838596045970917    ndcg@10 : 0.22036950290203094    hit@10 : 0.7224576473236084    precision@10 : 0.14703388512134552
+recall@10 : 0.20977893471717834    mrr@10 : 0.3585452139377594    ndcg@10 : 0.21627749502658844    hit@10 : 0.7372881174087524    precision@10 : 0.15402542054653168
 Test result:
 
 
-n_neighbors:50, n_pseudo:20, weight:0.5
+model_names:all, n_neighbors:100, n_pseudo:20, weight:0.25
+Valid result:
+recall@10 : 0.20458835363388062    mrr@10 : 0.3680824339389801    ndcg@10 : 0.22042728960514069    hit@10 : 0.7055084705352783    precision@10 : 0.15614406764507294
+Test result:
+
+
+model_names:BPR, n_neighbors:50, n_pseudo:5, weight:0.25
+Valid result:
+recall@10 : 0.20994611084461212    mrr@10 : 0.36406630277633667    ndcg@10 : 0.2207249402999878    hit@10 : 0.7372881174087524    precision@10 : 0.1565677970647812
+Test result:
+
+
+model_names:EASE, n_neighbors:400, n_pseudo:20, weight:0.25
+Valid result:
+recall@10 : 0.2005491703748703    mrr@10 : 0.3990785777568817    ndcg@10 : 0.2256920337677002    hit@10 : 0.7182203531265259    precision@10 : 0.1485169678926468
+Test result:
+
+
+model_names:BPR, n_neighbors:400, n_pseudo:5, weight:1.0
+Valid result:
+recall@10 : 0.20852243900299072    mrr@10 : 0.39930981397628784    ndcg@10 : 0.23263126611709595    hit@10 : 0.7372881174087524    precision@10 : 0.15402543544769287
+Test result:
+
+
+model_names:LightGCN, n_neighbors:100, n_pseudo:5, weight:0.5
+Valid result:
+recall@10 : 0.20165152847766876    mrr@10 : 0.36269253492355347    ndcg@10 : 0.21625152230262756    hit@10 : 0.7309321761131287    precision@10 : 0.15169492363929749
+Test result:
+
+
+model_names:BPR, n_neighbors:50, n_pseudo:5, weight:1.0
+Valid result:
+recall@10 : 0.20100614428520203    mrr@10 : 0.38885360956192017    ndcg@10 : 0.22502487897872925    hit@10 : 0.7118644118309021    precision@10 : 0.15381357073783875
+Test result:
+
+
+model_names:all, n_neighbors:50, n_pseudo:20, weight:1.0
+Valid result:
+recall@10 : 0.1891874074935913    mrr@10 : 0.3281089961528778    ndcg@10 : 0.19875341653823853    hit@10 : 0.6991525292396545    precision@10 : 0.14788135886192322
+Test result:
+
+
+model_names:BPR, n_neighbors:100, n_pseudo:20, weight:0.5
+Valid result:
+recall@10 : 0.20237429440021515    mrr@10 : 0.3641461431980133    ndcg@10 : 0.21913425624370575    hit@10 : 0.7182203531265259    precision@10 : 0.15614408254623413
+Test result:
+
+
+model_names:EASE, n_neighbors:100, n_pseudo:50, weight:0.25
+Valid result:
+recall@10 : 0.1796431839466095    mrr@10 : 0.33053621649742126    ndcg@10 : 0.19426852464675903    hit@10 : 0.6737288236618042    precision@10 : 0.14279663562774658
+Test result:
+
+
+model_names:EASE, n_neighbors:100, n_pseudo:5, weight:1.0
+Valid result:
+recall@10 : 0.2031596451997757    mrr@10 : 0.3875117599964142    ndcg@10 : 0.22693537175655365    hit@10 : 0.7457627058029175    precision@10 : 0.15614408254623413
+Test result:
+
+
+model_names:BPR, n_neighbors:50, n_pseudo:5, weight:0.5
+Valid result:
+recall@10 : 0.20675866305828094    mrr@10 : 0.362430214881897    ndcg@10 : 0.2194039225578308    hit@10 : 0.7351694703102112    precision@10 : 0.1550847589969635
+Test result:
+
+
+model_names:all, n_neighbors:50, n_pseudo:20, weight:0.5
 Valid result:
 recall@10 : 0.19840818643569946    mrr@10 : 0.34492871165275574    ndcg@10 : 0.20688971877098083    hit@10 : 0.7097457647323608    precision@10 : 0.15000000596046448
 Test result:
 
 
-n_neighbors:400, n_pseudo:5, weight:0.5
-Valid result:
-recall@10 : 0.1991950273513794    mrr@10 : 0.38957488536834717    ndcg@10 : 0.22564557194709778    hit@10 : 0.7203390002250671    precision@10 : 0.14978814125061035
-Test result:
-
-
-n_neighbors:400, n_pseudo:20, weight:0.5
+model_names:all, n_neighbors:400, n_pseudo:20, weight:0.5
 Valid result:
 recall@10 : 0.20197218656539917    mrr@10 : 0.3734118342399597    ndcg@10 : 0.21930670738220215    hit@10 : 0.7245762944221497    precision@10 : 0.14915254712104797
 Test result:
 
 
-n_neighbors:100, n_pseudo:5, weight:0.5
+model_names:BPR, n_neighbors:400, n_pseudo:50, weight:0.25
+Valid result:
+recall@10 : 0.20567920804023743    mrr@10 : 0.3938685655593872    ndcg@10 : 0.22609339654445648    hit@10 : 0.7161017060279846    precision@10 : 0.15000000596046448
+Test result:
+
+
+model_names:BPR, n_neighbors:50, n_pseudo:50, weight:0.5
+Valid result:
+recall@10 : 0.17339986562728882    mrr@10 : 0.3367080092430115    ndcg@10 : 0.19235475361347198    hit@10 : 0.6694915294647217    precision@10 : 0.1413135677576065
+Test result:
+
+
+model_names:EASE, n_neighbors:50, n_pseudo:50, weight:0.5
+Valid result:
+recall@10 : 0.16068856418132782    mrr@10 : 0.3276945650577545    ndcg@10 : 0.17925924062728882    hit@10 : 0.6610169410705566    precision@10 : 0.13114406168460846
+Test result:
+
+
+model_names:EASE, n_neighbors:400, n_pseudo:20, weight:0.5
+Valid result:
+recall@10 : 0.19351112842559814    mrr@10 : 0.386087566614151    ndcg@10 : 0.2166421115398407    hit@10 : 0.7182203531265259    precision@10 : 0.14470340311527252
+Test result:
+
+
+model_names:EASE, n_neighbors:50, n_pseudo:20, weight:1.0
+Valid result:
+recall@10 : 0.17189475893974304    mrr@10 : 0.3149305582046509    ndcg@10 : 0.18377377092838287    hit@10 : 0.6758474707603455    precision@10 : 0.13750000298023224
+Test result:
+
+
+model_names:LightGCN, n_neighbors:50, n_pseudo:20, weight:1.0
+Valid result:
+recall@10 : 0.1448805183172226    mrr@10 : 0.2884660065174103    ndcg@10 : 0.1612877994775772    hit@10 : 0.6207627058029175    precision@10 : 0.1218220517039299
+Test result:
+
+
+model_names:all, n_neighbors:50, n_pseudo:50, weight:0.25
+Valid result:
+recall@10 : 0.19078338146209717    mrr@10 : 0.35573965311050415    ndcg@10 : 0.20533432066440582    hit@10 : 0.7097457647323608    precision@10 : 0.14724576473236084
+Test result:
+
+
+model_names:EASE, n_neighbors:400, n_pseudo:50, weight:0.25
+Valid result:
+recall@10 : 0.20270955562591553    mrr@10 : 0.38718724250793457    ndcg@10 : 0.22186607122421265    hit@10 : 0.7224576473236084    precision@10 : 0.14745762944221497
+Test result:
+
+
+model_names:BPR, n_neighbors:100, n_pseudo:5, weight:1.0
+Valid result:
+recall@10 : 0.20612308382987976    mrr@10 : 0.3933615982532501    ndcg@10 : 0.23088696599006653    hit@10 : 0.7203390002250671    precision@10 : 0.15783898532390594
+Test result:
+
+
+model_names:EASE, n_neighbors:100, n_pseudo:20, weight:0.25
+Valid result:
+recall@10 : 0.20553790032863617    mrr@10 : 0.36190980672836304    ndcg@10 : 0.21632058918476105    hit@10 : 0.7118644118309021    precision@10 : 0.15466101467609406
+Test result:
+
+
+model_names:EASE, n_neighbors:100, n_pseudo:5, weight:0.5
+Valid result:
+recall@10 : 0.20345379412174225    mrr@10 : 0.39042067527770996    ndcg@10 : 0.2256343811750412    hit@10 : 0.7224576473236084    precision@10 : 0.15550847351551056
+Test result:
+
+
+model_names:EASE, n_neighbors:50, n_pseudo:50, weight:1.0
+Valid result:
+recall@10 : 0.1470264196395874    mrr@10 : 0.2968539893627167    ndcg@10 : 0.16478665173053741    hit@10 : 0.6313559412956238    precision@10 : 0.12245763093233109
+Test result:
+
+
+model_names:all, n_neighbors:100, n_pseudo:5, weight:1.0
+Valid result:
+recall@10 : 0.2031596451997757    mrr@10 : 0.3875117599964142    ndcg@10 : 0.22693537175655365    hit@10 : 0.7457627058029175    precision@10 : 0.15614408254623413
+Test result:
+
+
+model_names:EASE, n_neighbors:100, n_pseudo:20, weight:0.5
+Valid result:
+recall@10 : 0.19204789400100708    mrr@10 : 0.3568115830421448    ndcg@10 : 0.2049734741449356    hit@10 : 0.7097457647323608    precision@10 : 0.1470339000225067
+Test result:
+
+
+model_names:BPR, n_neighbors:100, n_pseudo:5, weight:0.5
 Valid result:
 recall@10 : 0.20689834654331207    mrr@10 : 0.3921433687210083    ndcg@10 : 0.22929954528808594    hit@10 : 0.7203390002250671    precision@10 : 0.1565677970647812
 Test result:
 
 
-n_neighbors:50, n_pseudo:5, weight:1.0
+model_names:LightGCN, n_neighbors:50, n_pseudo:50, weight:0.5
+Valid result:
+recall@10 : 0.13088364899158478    mrr@10 : 0.2895160913467407    ndcg@10 : 0.15435490012168884    hit@10 : 0.5974576473236084    precision@10 : 0.11631356179714203
+Test result:
+
+
+model_names:BPR, n_neighbors:400, n_pseudo:20, weight:0.5
+Valid result:
+recall@10 : 0.19626548886299133    mrr@10 : 0.3876950442790985    ndcg@10 : 0.2207876741886139    hit@10 : 0.7118644118309021    precision@10 : 0.14830508828163147
+Test result:
+
+
+model_names:all, n_neighbors:400, n_pseudo:50, weight:0.5
+Valid result:
+recall@10 : 0.1870621293783188    mrr@10 : 0.35739338397979736    ndcg@10 : 0.2041955441236496    hit@10 : 0.6885592937469482    precision@10 : 0.13919492065906525
+Test result:
+
+
+model_names:all, n_neighbors:50, n_pseudo:5, weight:0.25
+Valid result:
+recall@10 : 0.20994611084461212    mrr@10 : 0.36406630277633667    ndcg@10 : 0.2207249402999878    hit@10 : 0.7372881174087524    precision@10 : 0.1565677970647812
+Test result:
+
+
+model_names:all, n_neighbors:50, n_pseudo:20, weight:0.25
+Valid result:
+recall@10 : 0.19571633636951447    mrr@10 : 0.35818031430244446    ndcg@10 : 0.21111080050468445    hit@10 : 0.7139830589294434    precision@10 : 0.15190677344799042
+Test result:
+
+
+model_names:all, n_neighbors:400, n_pseudo:50, weight:1.0
+Valid result:
+recall@10 : 0.17834603786468506    mrr@10 : 0.34079232811927795    ndcg@10 : 0.19250737130641937    hit@10 : 0.6864407062530518    precision@10 : 0.14110170304775238
+Test result:
+
+
+model_names:LightGCN, n_neighbors:400, n_pseudo:5, weight:0.5
+Valid result:
+recall@10 : 0.2005070298910141    mrr@10 : 0.37658143043518066    ndcg@10 : 0.22127559781074524    hit@10 : 0.7288135886192322    precision@10 : 0.14915254712104797
+Test result:
+
+
+model_names:LightGCN, n_neighbors:400, n_pseudo:5, weight:1.0
+Valid result:
+recall@10 : 0.19320493936538696    mrr@10 : 0.3680572211742401    ndcg@10 : 0.21400734782218933    hit@10 : 0.7118644118309021    precision@10 : 0.14512711763381958
+Test result:
+
+
+model_names:all, n_neighbors:400, n_pseudo:5, weight:1.0
+Valid result:
+recall@10 : 0.20184309780597687    mrr@10 : 0.3885340988636017    ndcg@10 : 0.22579453885555267    hit@10 : 0.7224576473236084    precision@10 : 0.15127119421958923
+Test result:
+
+
+model_names:LightGCN, n_neighbors:50, n_pseudo:50, weight:0.25
+Valid result:
+recall@10 : 0.15729650855064392    mrr@10 : 0.3084981143474579    ndcg@10 : 0.1737772822380066    hit@10 : 0.6567796468734741    precision@10 : 0.13093221187591553
+Test result:
+
+
+model_names:LightGCN, n_neighbors:400, n_pseudo:50, weight:1.0
+Valid result:
+recall@10 : 0.1332094520330429    mrr@10 : 0.27886903285980225    ndcg@10 : 0.15397530794143677    hit@10 : 0.5932203531265259    precision@10 : 0.1169491559267044
+Test result:
+
+
+model_names:EASE, n_neighbors:50, n_pseudo:50, weight:0.25
+Valid result:
+recall@10 : 0.17742323875427246    mrr@10 : 0.33019745349884033    ndcg@10 : 0.1898411512374878    hit@10 : 0.6843220591545105    precision@10 : 0.13983051478862762
+Test result:
+
+
+model_names:EASE, n_neighbors:400, n_pseudo:20, weight:1.0
+Valid result:
+recall@10 : 0.18772146105766296    mrr@10 : 0.36540722846984863    ndcg@10 : 0.2052612453699112    hit@10 : 0.7055084705352783    precision@10 : 0.14088982343673706
+Test result:
+
+
+model_names:all, n_neighbors:100, n_pseudo:50, weight:0.5
+Valid result:
+recall@10 : 0.16405202448368073    mrr@10 : 0.31217798590660095    ndcg@10 : 0.177201509475708    hit@10 : 0.6631355881690979    precision@10 : 0.13199153542518616
+Test result:
+
+
+model_names:LightGCN, n_neighbors:400, n_pseudo:20, weight:0.25
+Valid result:
+recall@10 : 0.19524945318698883    mrr@10 : 0.38198983669281006    ndcg@10 : 0.21784614026546478    hit@10 : 0.7203390002250671    precision@10 : 0.14385591447353363
+Test result:
+
+
+model_names:all, n_neighbors:100, n_pseudo:20, weight:1.0
+Valid result:
+recall@10 : 0.18833912909030914    mrr@10 : 0.3367340862751007    ndcg@10 : 0.20346561074256897    hit@10 : 0.6991525292396545    precision@10 : 0.14915254712104797
+Test result:
+
+
+model_names:EASE, n_neighbors:50, n_pseudo:20, weight:0.5
+Valid result:
+recall@10 : 0.17772634327411652    mrr@10 : 0.33235475420951843    ndcg@10 : 0.19139429926872253    hit@10 : 0.6779661178588867    precision@10 : 0.14088985323905945
+Test result:
+
+
+model_names:LightGCN, n_neighbors:400, n_pseudo:20, weight:1.0
+Valid result:
+recall@10 : 0.16913281381130219    mrr@10 : 0.3351232707500458    ndcg@10 : 0.1856750100851059    hit@10 : 0.6588982939720154    precision@10 : 0.1298728883266449
+Test result:
+
+
+model_names:EASE, n_neighbors:50, n_pseudo:5, weight:1.0
+Valid result:
+recall@10 : 0.20355366170406342    mrr@10 : 0.37395748496055603    ndcg@10 : 0.22046522796154022    hit@10 : 0.7245762944221497    precision@10 : 0.1550847589969635
+Test result:
+
+
+model_names:LightGCN, n_neighbors:100, n_pseudo:20, weight:0.5
+Valid result:
+recall@10 : 0.17596851289272308    mrr@10 : 0.3482537865638733    ndcg@10 : 0.19439278542995453    hit@10 : 0.6758474707603455    precision@10 : 0.1355932205915451
+Test result:
+
+
+model_names:all, n_neighbors:100, n_pseudo:50, weight:0.25
+Valid result:
+recall@10 : 0.17979614436626434    mrr@10 : 0.33832311630249023    ndcg@10 : 0.19769033789634705    hit@10 : 0.6822034120559692    precision@10 : 0.14237289130687714
+Test result:
+
+
+model_names:LightGCN, n_neighbors:400, n_pseudo:50, weight:0.5
+Valid result:
+recall@10 : 0.17050640285015106    mrr@10 : 0.3230411112308502    ndcg@10 : 0.18631577491760254    hit@10 : 0.6483050584793091    precision@10 : 0.13347457349300385
+Test result:
+
+
+model_names:all, n_neighbors:100, n_pseudo:50, weight:1.0
+Valid result:
+recall@10 : 0.15057328343391418    mrr@10 : 0.2910260260105133    ndcg@10 : 0.1629142165184021    hit@10 : 0.6525423526763916    precision@10 : 0.1250000149011612
+Test result:
+
+
+model_names:LightGCN, n_neighbors:100, n_pseudo:50, weight:1.0
+Valid result:
+recall@10 : 0.1162320002913475    mrr@10 : 0.26424622535705566    ndcg@10 : 0.1430196911096573    hit@10 : 0.5656779408454895    precision@10 : 0.1103813573718071
+Test result:
+
+
+model_names:BPR, n_neighbors:100, n_pseudo:50, weight:1.0
+Valid result:
+recall@10 : 0.1494150310754776    mrr@10 : 0.32126545906066895    ndcg@10 : 0.17461726069450378    hit@10 : 0.6355932354927063    precision@10 : 0.12838982045650482
+Test result:
+
+
+model_names:LightGCN, n_neighbors:50, n_pseudo:5, weight:1.0
+Valid result:
+recall@10 : 0.19924411177635193    mrr@10 : 0.3412488102912903    ndcg@10 : 0.20589928328990936    hit@10 : 0.7203390002250671    precision@10 : 0.14788135886192322
+Test result:
+
+
+model_names:EASE, n_neighbors:50, n_pseudo:5, weight:0.5
+Valid result:
+recall@10 : 0.20866045355796814    mrr@10 : 0.36856505274772644    ndcg@10 : 0.2209826111793518    hit@10 : 0.7245762944221497    precision@10 : 0.15677966177463531
+Test result:
+
+
+model_names:all, n_neighbors:50, n_pseudo:5, weight:1.0
 Valid result:
 recall@10 : 0.21435648202896118    mrr@10 : 0.36805132031440735    ndcg@10 : 0.22210009396076202    hit@10 : 0.7351694703102112    precision@10 : 0.15550847351551056
+Test result:
+
+
+model_names:LightGCN, n_neighbors:400, n_pseudo:50, weight:0.25
+Valid result:
+recall@10 : 0.1962031126022339    mrr@10 : 0.3654458820819855    ndcg@10 : 0.21343544125556946    hit@10 : 0.6991525292396545    precision@10 : 0.14470340311527252
+Test result:
+
+
+model_names:EASE, n_neighbors:100, n_pseudo:20, weight:1.0
+Valid result:
+recall@10 : 0.1863315999507904    mrr@10 : 0.33293986320495605    ndcg@10 : 0.19590449333190918    hit@10 : 0.7097457647323608    precision@10 : 0.14406780898571014
+Test result:
+
+
+model_names:LightGCN, n_neighbors:400, n_pseudo:20, weight:0.5
+Valid result:
+recall@10 : 0.186078280210495    mrr@10 : 0.3438315689563751    ndcg@10 : 0.20007926225662231    hit@10 : 0.694915235042572    precision@10 : 0.13813558220863342
+Test result:
+
+
+model_names:BPR, n_neighbors:100, n_pseudo:50, weight:0.25
+Valid result:
+recall@10 : 0.1858154982328415    mrr@10 : 0.3454239070415497    ndcg@10 : 0.20240099728107452    hit@10 : 0.6906779408454895    precision@10 : 0.14491525292396545
+Test result:
+
+
+model_names:LightGCN, n_neighbors:100, n_pseudo:5, weight:1.0
+Valid result:
+recall@10 : 0.19718727469444275    mrr@10 : 0.34249475598335266    ndcg@10 : 0.20865215361118317    hit@10 : 0.7224576473236084    precision@10 : 0.14915256202220917
+Test result:
+
+
+model_names:all, n_neighbors:100, n_pseudo:5, weight:0.5
+Valid result:
+recall@10 : 0.20689834654331207    mrr@10 : 0.3921433687210083    ndcg@10 : 0.22929954528808594    hit@10 : 0.7203390002250671    precision@10 : 0.1565677970647812
+Test result:
+
+
+model_names:EASE, n_neighbors:400, n_pseudo:50, weight:1.0
+Valid result:
+recall@10 : 0.16249556839466095    mrr@10 : 0.32814183831214905    ndcg@10 : 0.1820184737443924    hit@10 : 0.6525423526763916    precision@10 : 0.13177965581417084
+Test result:
+
+
+model_names:all, n_neighbors:400, n_pseudo:50, weight:0.25
+Valid result:
+recall@10 : 0.20036624372005463    mrr@10 : 0.3838596045970917    ndcg@10 : 0.22036950290203094    hit@10 : 0.7224576473236084    precision@10 : 0.14703388512134552
+Test result:
+
+
+model_names:LightGCN, n_neighbors:50, n_pseudo:50, weight:1.0
+Valid result:
+recall@10 : 0.1191256120800972    mrr@10 : 0.2544878125190735    ndcg@10 : 0.14054851233959198    hit@10 : 0.5656779408454895    precision@10 : 0.10932204127311707
+Test result:
+
+
+model_names:LightGCN, n_neighbors:100, n_pseudo:50, weight:0.25
+Valid result:
+recall@10 : 0.16237056255340576    mrr@10 : 0.3148674964904785    ndcg@10 : 0.18065012991428375    hit@10 : 0.6525423526763916    precision@10 : 0.13262712955474854
+Test result:
+
+
+model_names:LightGCN, n_neighbors:50, n_pseudo:20, weight:0.5
+Valid result:
+recall@10 : 0.1637728065252304    mrr@10 : 0.3060608208179474    ndcg@10 : 0.17451290786266327    hit@10 : 0.6610169410705566    precision@10 : 0.13114407658576965
+Test result:
+
+
+model_names:BPR, n_neighbors:100, n_pseudo:50, weight:0.5
+Valid result:
+recall@10 : 0.1723756194114685    mrr@10 : 0.3248167335987091    ndcg@10 : 0.18806537985801697    hit@10 : 0.680084764957428    precision@10 : 0.137076273560524
+Test result:
+
+
+model_names:BPR, n_neighbors:400, n_pseudo:20, weight:1.0
+Valid result:
+recall@10 : 0.19336090981960297    mrr@10 : 0.37894389033317566    ndcg@10 : 0.21687492728233337    hit@10 : 0.7161017060279846    precision@10 : 0.15000000596046448
+Test result:
+
+
+model_names:BPR, n_neighbors:50, n_pseudo:20, weight:0.25
+Valid result:
+recall@10 : 0.19571633636951447    mrr@10 : 0.35818031430244446    ndcg@10 : 0.21111080050468445    hit@10 : 0.7139830589294434    precision@10 : 0.15190677344799042
+Test result:
+
+
+model_names:all, n_neighbors:400, n_pseudo:5, weight:0.5
+Valid result:
+recall@10 : 0.1991950273513794    mrr@10 : 0.38957488536834717    ndcg@10 : 0.22564557194709778    hit@10 : 0.7203390002250671    precision@10 : 0.14978814125061035
+Test result:
+
+
+model_names:EASE, n_neighbors:400, n_pseudo:5, weight:0.25
+Valid result:
+recall@10 : 0.20649969577789307    mrr@10 : 0.3956139087677002    ndcg@10 : 0.23051874339580536    hit@10 : 0.7288135886192322    precision@10 : 0.15169492363929749
+Test result:
+
+
+model_names:EASE, n_neighbors:400, n_pseudo:5, weight:0.5
+Valid result:
+recall@10 : 0.20307987928390503    mrr@10 : 0.3967472016811371    ndcg@10 : 0.228755384683609    hit@10 : 0.7351694703102112    precision@10 : 0.15233051776885986
+Test result:
+
+
+model_names:all, n_neighbors:400, n_pseudo:20, weight:1.0
+Valid result:
+recall@10 : 0.19336090981960297    mrr@10 : 0.37894389033317566    ndcg@10 : 0.21687492728233337    hit@10 : 0.7161017060279846    precision@10 : 0.15000000596046448
+Test result:
+
+
+model_names:BPR, n_neighbors:100, n_pseudo:20, weight:1.0
+Valid result:
+recall@10 : 0.18833912909030914    mrr@10 : 0.3367340862751007    ndcg@10 : 0.20346561074256897    hit@10 : 0.6991525292396545    precision@10 : 0.14915254712104797
+Test result:
+
+
+model_names:all, n_neighbors:100, n_pseudo:5, weight:0.25
+Valid result:
+recall@10 : 0.20921523869037628    mrr@10 : 0.38721248507499695    ndcg@10 : 0.2270996868610382    hit@10 : 0.7309321761131287    precision@10 : 0.15762712061405182
+Test result:
+
+
+model_names:EASE, n_neighbors:100, n_pseudo:5, weight:0.25
+Valid result:
+recall@10 : 0.2117955982685089    mrr@10 : 0.3824867606163025    ndcg@10 : 0.22747702896595    hit@10 : 0.7288135886192322    precision@10 : 0.15847457945346832
+Test result:
+
+
+model_names:BPR, n_neighbors:50, n_pseudo:50, weight:1.0
+Valid result:
+recall@10 : 0.15887655317783356    mrr@10 : 0.3192662298679352    ndcg@10 : 0.17875608801841736    hit@10 : 0.6588982939720154    precision@10 : 0.13177968561649323
+Test result:
+
+
+model_names:BPR, n_neighbors:100, n_pseudo:5, weight:0.25
+Valid result:
+recall@10 : 0.20921523869037628    mrr@10 : 0.38721248507499695    ndcg@10 : 0.2270996868610382    hit@10 : 0.7309321761131287    precision@10 : 0.15762712061405182
+Test result:
+
+
+model_names:EASE, n_neighbors:100, n_pseudo:50, weight:0.5
+Valid result:
+recall@10 : 0.15978017449378967    mrr@10 : 0.3081214427947998    ndcg@10 : 0.17553040385246277    hit@10 : 0.6546609997749329    precision@10 : 0.1315678060054779
+Test result:
+
+
+model_names:BPR, n_neighbors:400, n_pseudo:5, weight:0.5
+Valid result:
+recall@10 : 0.210660919547081    mrr@10 : 0.39691200852394104    ndcg@10 : 0.2326813042163849    hit@10 : 0.741525411605835    precision@10 : 0.15360169112682343
+Test result:
+
+
+model_names:all, n_neighbors:50, n_pseudo:50, weight:0.5
+Valid result:
+recall@10 : 0.16883423924446106    mrr@10 : 0.3147716522216797    ndcg@10 : 0.17992576956748962    hit@10 : 0.680084764957428    precision@10 : 0.13326270878314972
+Test result:
+
+
+model_names:BPR, n_neighbors:50, n_pseudo:20, weight:0.5
+Valid result:
+recall@10 : 0.1954715996980667    mrr@10 : 0.3508071303367615    ndcg@10 : 0.2066424936056137    hit@10 : 0.7055084705352783    precision@10 : 0.14788135886192322
 Test result:
 
 

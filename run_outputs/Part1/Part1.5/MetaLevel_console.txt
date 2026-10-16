@@ -1,3 +1,5 @@
+E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\.venv\Lib\site-packages\hyperopt\atpe.py:19: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
 E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\recbole\data\dataset\dataset.py:648: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
 The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
 
@@ -12,43 +14,70 @@ For example, when doing 'df[col].method(value, inplace=True)', try using 'df.met
 
 
   feat[field].fillna(value=feat[field].mean(), inplace=True)
-Max value of user's history interaction records has reached 35.115864527629235% of the total.
-Pay Attetion!! the `split_to` is set to 0. If you catch a OMM error in this case, you need to increase it 
-			until the error disappears. For example, you can append it in the command line such as `--split_to=5`
-E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\recbole\model\general_recommender\lightgcn.py:126: UserWarning: torch.sparse.SparseTensor(indices, values, shape, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, shape, dtype=, device=). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_new.cpp:655.)
-  SparseL = torch.sparse.FloatTensor(i, data, torch.Size(L.shape))
-E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\recbole\model\general_recommender\ngcf.py:139: UserWarning: torch.sparse.SparseTensor(indices, values, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, dtype=, device=). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_new.cpp:643.)
-  return torch.sparse.FloatTensor(i, val)
-E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\.venv\Lib\site-packages\hyperopt\atpe.py:19: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
-  import pkg_resources
 loading BPR
 loading EASE
 loading FISM
+Max value of user's history interaction records has reached 35.115864527629235% of the total.
+Pay Attetion!! the `split_to` is set to 0. If you catch a OMM error in this case, you need to increase it 
+			until the error disappears. For example, you can append it in the command line such as `--split_to=5`
 loading ItemKNN
 loading LightGCN
+E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\recbole\model\general_recommender\lightgcn.py:126: UserWarning: torch.sparse.SparseTensor(indices, values, shape, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, shape, dtype=, device=). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_new.cpp:655.)
+  SparseL = torch.sparse.FloatTensor(i, data, torch.Size(L.shape))
 loading NGCF
+E:\TU Delft DSAIT\RecSys\RecBole_DSAIT4335\recbole\model\general_recommender\ngcf.py:139: UserWarning: torch.sparse.SparseTensor(indices, values, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, dtype=, device=). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_new.cpp:643.)
+  return torch.sparse.FloatTensor(i, val)
 loading NeuMF
 loading SLIMElastic
 loading UserKNN
-  0%|          | 0/4 [00:00<?, ?trial/s, best loss=?]                                                     running parameters:
-  0%|          | 0/4 [00:00<?, ?trial/s, best loss=?]                                                     {'n_neighbors': 200}
-  0%|          | 0/4 [00:00<?, ?trial/s, best loss=?]                                                     current best valid score: 0.3890
-  0%|          | 0/4 [00:00<?, ?trial/s, best loss=?]                                                     current best valid result:
-  0%|          | 0/4 [00:00<?, ?trial/s, best loss=?]                                                     {'recall@10': 0.1943211406469345, 'mrr@10': 0.3890133202075958, 'ndcg@10': 0.2246379852294922, 'hit@10': 0.7055084705352783, 'precision@10': 0.1508474498987198}
-  0%|          | 0/4 [00:00<?, ?trial/s, best loss=?]                                                     current test result:
-  0%|          | 0/4 [00:00<?, ?trial/s, best loss=?]                                                     {}
-  0%|          | 0/4 [00:00<?, ?trial/s, best loss=?]                                                     running parameters:
- 25%|██▌       | 1/4 [00:00<00:00, 14.84trial/s, best loss: -0.3890133202075958]                                                                                {'n_neighbors': 100}
- 25%|██▌       | 1/4 [00:00<00:00, 14.84trial/s, best loss: -0.3890133202075958]                                                                                current best valid score: 0.4083
- 25%|██▌       | 1/4 [00:00<00:00,  7.99trial/s, best loss: -0.3890133202075958]                                                                                current best valid result:
- 25%|██▌       | 1/4 [00:00<00:00,  7.95trial/s, best loss: -0.3890133202075958]                                                                                {'recall@10': 0.20330579578876495, 'mrr@10': 0.4083484709262848, 'ndcg@10': 0.23260557651519775, 'hit@10': 0.7372881174087524, 'precision@10': 0.15402543544769287}
- 25%|██▌       | 1/4 [00:00<00:00,  7.95trial/s, best loss: -0.3890133202075958]                                                                                current test result:
- 25%|██▌       | 1/4 [00:00<00:00,  7.95trial/s, best loss: -0.3890133202075958]                                                                                {}
- 25%|██▌       | 1/4 [00:00<00:00,  7.95trial/s, best loss: -0.3890133202075958] 50%|█████     | 2/4 [00:00<00:00, 15.91trial/s, best loss: -0.4083484709262848]                                                                                running parameters:
- 50%|█████     | 2/4 [00:00<00:00, 15.91trial/s, best loss: -0.4083484709262848]                                                                                {'n_neighbors': 10}
- 50%|█████     | 2/4 [00:00<00:00, 15.91trial/s, best loss: -0.4083484709262848]                                                                                running parameters:
- 75%|███████▌  | 3/4 [00:00<00:00, 15.91trial/s, best loss: -0.4083484709262848]                                                                                {'n_neighbors': 50}
- 75%|███████▌  | 3/4 [00:00<00:00, 15.91trial/s, best loss: -0.4083484709262848]100%|██████████| 4/4 [00:00<00:00, 17.92trial/s, best loss: -0.4083484709262848]100%|██████████| 4/4 [00:00<00:00, 17.59trial/s, best loss: -0.4083484709262848]
-best params: {'n_neighbors': 100}
-best validation result: {'recall@10': 0.20330579578876495, 'mrr@10': 0.4083484709262848, 'ndcg@10': 0.23260557651519775, 'hit@10': 0.7372881174087524, 'precision@10': 0.15402543544769287}
-saved: run_outputs\Part1\Part1.5\MetaLevel.best.json
+  0%|          | 0/16 [00:00<?, ?trial/s, best loss=?]                                                      running parameters:
+  0%|          | 0/16 [00:00<?, ?trial/s, best loss=?]                                                      {'model_names': 'LightGCN', 'n_neighbors': 200}
+  0%|          | 0/16 [00:00<?, ?trial/s, best loss=?]                                                      current best valid score: 0.3586
+  0%|          | 0/16 [00:00<?, ?trial/s, best loss=?]                                                      current best valid result:
+  0%|          | 0/16 [00:00<?, ?trial/s, best loss=?]                                                      {'recall@10': 0.18687482178211212, 'mrr@10': 0.3585544526576996, 'ndcg@10': 0.20908573269844055, 'hit@10': 0.694915235042572, 'precision@10': 0.14173731207847595}
+  0%|          | 0/16 [00:00<?, ?trial/s, best loss=?]                                                      current test result:
+  0%|          | 0/16 [00:00<?, ?trial/s, best loss=?]                                                      {}
+  0%|          | 0/16 [00:00<?, ?trial/s, best loss=?]                                                      running parameters:
+  6%|▋         | 1/16 [00:00<00:01, 14.64trial/s, best loss: -0.3585544526576996]                                                                                 {'model_names': 'all', 'n_neighbors': 100}
+  6%|▋         | 1/16 [00:00<00:01, 14.64trial/s, best loss: -0.3585544526576996]                                                                                 current best valid score: 0.4083
+  6%|▋         | 1/16 [00:00<00:02,  5.12trial/s, best loss: -0.3585544526576996]                                                                                 current best valid result:
+  6%|▋         | 1/16 [00:00<00:02,  5.12trial/s, best loss: -0.3585544526576996]                                                                                 {'recall@10': 0.20330579578876495, 'mrr@10': 0.4083484709262848, 'ndcg@10': 0.23260557651519775, 'hit@10': 0.7372881174087524, 'precision@10': 0.15402543544769287}
+  6%|▋         | 1/16 [00:00<00:02,  5.12trial/s, best loss: -0.3585544526576996]                                                                                 current test result:
+  6%|▋         | 1/16 [00:00<00:02,  5.12trial/s, best loss: -0.3585544526576996]                                                                                 {}
+  6%|▋         | 1/16 [00:00<00:02,  5.12trial/s, best loss: -0.3585544526576996] 12%|█▎        | 2/16 [00:00<00:01, 10.24trial/s, best loss: -0.4083484709262848]                                                                                 running parameters:
+ 12%|█▎        | 2/16 [00:00<00:01, 10.24trial/s, best loss: -0.4083484709262848]                                                                                 {'model_names': 'NeuMF', 'n_neighbors': 100}
+ 12%|█▎        | 2/16 [00:00<00:01, 10.24trial/s, best loss: -0.4083484709262848]                                                                                 running parameters:
+ 19%|█▉        | 3/16 [00:00<00:01, 10.24trial/s, best loss: -0.4083484709262848]                                                                                 {'model_names': 'LightGCN', 'n_neighbors': 10}
+ 19%|█▉        | 3/16 [00:00<00:01, 10.24trial/s, best loss: -0.4083484709262848]                                                                                 running parameters:
+ 25%|██▌       | 4/16 [00:00<00:01, 10.24trial/s, best loss: -0.4083484709262848]                                                                                 {'model_names': 'NeuMF', 'n_neighbors': 50}
+ 25%|██▌       | 4/16 [00:00<00:01, 10.24trial/s, best loss: -0.4083484709262848] 31%|███▏      | 5/16 [00:00<00:00, 15.65trial/s, best loss: -0.4083484709262848]                                                                                 running parameters:
+ 31%|███▏      | 5/16 [00:00<00:00, 15.65trial/s, best loss: -0.4083484709262848]                                                                                 {'model_names': 'all', 'n_neighbors': 50}
+ 31%|███▏      | 5/16 [00:00<00:00, 15.65trial/s, best loss: -0.4083484709262848]                                                                                 running parameters:
+ 38%|███▊      | 6/16 [00:00<00:00, 15.65trial/s, best loss: -0.4083484709262848]                                                                                 {'model_names': 'BPR', 'n_neighbors': 10}
+ 38%|███▊      | 6/16 [00:00<00:00, 15.65trial/s, best loss: -0.4083484709262848] 44%|████▍     | 7/16 [00:00<00:00, 14.29trial/s, best loss: -0.4083484709262848]                                                                                 running parameters:
+ 44%|████▍     | 7/16 [00:00<00:00, 14.29trial/s, best loss: -0.4083484709262848]                                                                                 {'model_names': 'NeuMF', 'n_neighbors': 10}
+ 44%|████▍     | 7/16 [00:00<00:00, 14.29trial/s, best loss: -0.4083484709262848]                                                                                 running parameters:
+ 50%|█████     | 8/16 [00:00<00:00, 14.29trial/s, best loss: -0.4083484709262848]                                                                                 {'model_names': 'BPR', 'n_neighbors': 50}
+ 50%|█████     | 8/16 [00:00<00:00, 14.29trial/s, best loss: -0.4083484709262848]                                                                                 current best valid score: 0.4156
+ 50%|█████     | 8/16 [00:00<00:00, 14.29trial/s, best loss: -0.4083484709262848]                                                                                 current best valid result:
+ 50%|█████     | 8/16 [00:00<00:00, 14.29trial/s, best loss: -0.4083484709262848]                                                                                 {'recall@10': 0.21959835290908813, 'mrr@10': 0.41558462381362915, 'ndcg@10': 0.24272139370441437, 'hit@10': 0.7521186470985413, 'precision@10': 0.1616525501012802}
+ 50%|█████     | 8/16 [00:00<00:00, 14.29trial/s, best loss: -0.4083484709262848]                                                                                 current test result:
+ 50%|█████     | 8/16 [00:00<00:00, 14.29trial/s, best loss: -0.4083484709262848]                                                                                 {}
+ 50%|█████     | 8/16 [00:00<00:00, 14.29trial/s, best loss: -0.4083484709262848]                                                                                 running parameters:
+ 56%|█████▋    | 9/16 [00:00<00:00, 14.29trial/s, best loss: -0.41558462381362915]                                                                                  {'model_names': 'LightGCN', 'n_neighbors': 100}
+ 56%|█████▋    | 9/16 [00:00<00:00, 14.29trial/s, best loss: -0.41558462381362915] 62%|██████▎   | 10/16 [00:00<00:00, 16.90trial/s, best loss: -0.41558462381362915]                                                                                   running parameters:
+ 62%|██████▎   | 10/16 [00:00<00:00, 16.90trial/s, best loss: -0.41558462381362915]                                                                                   {'model_names': 'NeuMF', 'n_neighbors': 200}
+ 62%|██████▎   | 10/16 [00:00<00:00, 16.90trial/s, best loss: -0.41558462381362915]                                                                                   running parameters:
+ 69%|██████▉   | 11/16 [00:00<00:00, 16.90trial/s, best loss: -0.41558462381362915]                                                                                   {'model_names': 'all', 'n_neighbors': 10}
+ 69%|██████▉   | 11/16 [00:00<00:00, 16.90trial/s, best loss: -0.41558462381362915] 75%|███████▌  | 12/16 [00:00<00:00, 15.43trial/s, best loss: -0.41558462381362915]                                                                                   running parameters:
+ 75%|███████▌  | 12/16 [00:00<00:00, 15.43trial/s, best loss: -0.41558462381362915]                                                                                   {'model_names': 'BPR', 'n_neighbors': 100}
+ 75%|███████▌  | 12/16 [00:00<00:00, 15.43trial/s, best loss: -0.41558462381362915]                                                                                   running parameters:
+ 81%|████████▏ | 13/16 [00:00<00:00, 15.43trial/s, best loss: -0.41558462381362915]                                                                                   {'model_names': 'LightGCN', 'n_neighbors': 50}
+ 81%|████████▏ | 13/16 [00:00<00:00, 15.43trial/s, best loss: -0.41558462381362915] 88%|████████▊ | 14/16 [00:00<00:00, 16.22trial/s, best loss: -0.41558462381362915]                                                                                   running parameters:
+ 88%|████████▊ | 14/16 [00:00<00:00, 16.22trial/s, best loss: -0.41558462381362915]                                                                                   {'model_names': 'BPR', 'n_neighbors': 200}
+ 88%|████████▊ | 14/16 [00:00<00:00, 16.22trial/s, best loss: -0.41558462381362915]                                                                                   running parameters:
+ 94%|█████████▍| 15/16 [00:00<00:00, 16.22trial/s, best loss: -0.41558462381362915]                                                                                   {'model_names': 'all', 'n_neighbors': 200}
+ 94%|█████████▍| 15/16 [00:00<00:00, 16.22trial/s, best loss: -0.41558462381362915]100%|██████████| 16/16 [00:01<00:00, 14.46trial/s, best loss: -0.41558462381362915]100%|██████████| 16/16 [00:01<00:00, 14.88trial/s, best loss: -0.41558462381362915]
+best params:  {'model_names': 'BPR', 'n_neighbors': 50}
+best result: 
+{'model': 'MetaLevel', 'best_valid_score': 0.41558462381362915, 'valid_score_bigger': True, 'best_valid_result': {'recall@10': 0.21959835290908813, 'mrr@10': 0.41558462381362915, 'ndcg@10': 0.24272139370441437, 'hit@10': 0.7521186470985413, 'precision@10': 0.1616525501012802}, 'test_result': {}}

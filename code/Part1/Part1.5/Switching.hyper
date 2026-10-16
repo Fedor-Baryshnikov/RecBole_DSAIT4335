@@ -1,1 +1,2 @@
-n_groups choice [1,2,3,5,10]
+model_names choice ['BPR,EASE','ItemKNN,LightGCN','BPR,EASE,LightGCN','all']
+n_groups choice [1,3,5]

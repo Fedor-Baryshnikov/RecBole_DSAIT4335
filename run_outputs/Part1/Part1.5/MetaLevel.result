@@ -1,24 +1,96 @@
-n_neighbors:200
+model_names:LightGCN, n_neighbors:200
 Valid result:
-recall@10 : 0.1943211406469345    mrr@10 : 0.3890133202075958    ndcg@10 : 0.2246379852294922    hit@10 : 0.7055084705352783    precision@10 : 0.1508474498987198
+recall@10 : 0.18687482178211212    mrr@10 : 0.3585544526576996    ndcg@10 : 0.20908573269844055    hit@10 : 0.694915235042572    precision@10 : 0.14173731207847595
 Test result:
 
 
-n_neighbors:100
+model_names:all, n_neighbors:100
 Valid result:
 recall@10 : 0.20330579578876495    mrr@10 : 0.4083484709262848    ndcg@10 : 0.23260557651519775    hit@10 : 0.7372881174087524    precision@10 : 0.15402543544769287
 Test result:
 
 
-n_neighbors:10
+model_names:NeuMF, n_neighbors:100
+Valid result:
+recall@10 : 0.20451968908309937    mrr@10 : 0.402892142534256    ndcg@10 : 0.23309053480625153    hit@10 : 0.7224576473236084    precision@10 : 0.15699154138565063
+Test result:
+
+
+model_names:LightGCN, n_neighbors:10
+Valid result:
+recall@10 : 0.17796584963798523    mrr@10 : 0.32390955090522766    ndcg@10 : 0.18607786297798157    hit@10 : 0.6822034120559692    precision@10 : 0.12627120316028595
+Test result:
+
+
+model_names:NeuMF, n_neighbors:50
+Valid result:
+recall@10 : 0.21679958701133728    mrr@10 : 0.40443655848503113    ndcg@10 : 0.23761160671710968    hit@10 : 0.75    precision@10 : 0.1608050912618637
+Test result:
+
+
+model_names:all, n_neighbors:50
+Valid result:
+recall@10 : 0.21679958701133728    mrr@10 : 0.40443655848503113    ndcg@10 : 0.23761160671710968    hit@10 : 0.75    precision@10 : 0.1608050912618637
+Test result:
+
+
+model_names:BPR, n_neighbors:10
+Valid result:
+recall@10 : 0.21189166605472565    mrr@10 : 0.36699119210243225    ndcg@10 : 0.21981064975261688    hit@10 : 0.7372881174087524    precision@10 : 0.15000000596046448
+Test result:
+
+
+model_names:NeuMF, n_neighbors:10
 Valid result:
 recall@10 : 0.2017563134431839    mrr@10 : 0.3762241303920746    ndcg@10 : 0.21866828203201294    hit@10 : 0.7076271176338196    precision@10 : 0.1470339000225067
 Test result:
 
 
-n_neighbors:50
+model_names:BPR, n_neighbors:50
 Valid result:
-recall@10 : 0.21679958701133728    mrr@10 : 0.40443655848503113    ndcg@10 : 0.23761160671710968    hit@10 : 0.75    precision@10 : 0.1608050912618637
+recall@10 : 0.21959835290908813    mrr@10 : 0.41558462381362915    ndcg@10 : 0.24272139370441437    hit@10 : 0.7521186470985413    precision@10 : 0.1616525501012802
+Test result:
+
+
+model_names:LightGCN, n_neighbors:100
+Valid result:
+recall@10 : 0.18920154869556427    mrr@10 : 0.3682270646095276    ndcg@10 : 0.2114565372467041    hit@10 : 0.7012711763381958    precision@10 : 0.14025424420833588
+Test result:
+
+
+model_names:NeuMF, n_neighbors:200
+Valid result:
+recall@10 : 0.1943211406469345    mrr@10 : 0.3890133202075958    ndcg@10 : 0.2246379852294922    hit@10 : 0.7055084705352783    precision@10 : 0.1508474498987198
+Test result:
+
+
+model_names:all, n_neighbors:10
+Valid result:
+recall@10 : 0.2017563134431839    mrr@10 : 0.3762241303920746    ndcg@10 : 0.21866828203201294    hit@10 : 0.7076271176338196    precision@10 : 0.1470339000225067
+Test result:
+
+
+model_names:BPR, n_neighbors:100
+Valid result:
+recall@10 : 0.20330579578876495    mrr@10 : 0.4083484709262848    ndcg@10 : 0.23260557651519775    hit@10 : 0.7372881174087524    precision@10 : 0.15402543544769287
+Test result:
+
+
+model_names:LightGCN, n_neighbors:50
+Valid result:
+recall@10 : 0.1860077977180481    mrr@10 : 0.374166876077652    ndcg@10 : 0.21112777292728424    hit@10 : 0.694915235042572    precision@10 : 0.14004236459732056
+Test result:
+
+
+model_names:BPR, n_neighbors:200
+Valid result:
+recall@10 : 0.19688473641872406    mrr@10 : 0.3894076347351074    ndcg@10 : 0.22400899231433868    hit@10 : 0.7224576473236084    precision@10 : 0.14978814125061035
+Test result:
+
+
+model_names:all, n_neighbors:200
+Valid result:
+recall@10 : 0.1943211406469345    mrr@10 : 0.3890133202075958    ndcg@10 : 0.2246379852294922    hit@10 : 0.7055084705352783    precision@10 : 0.1508474498987198
 Test result:
 
 

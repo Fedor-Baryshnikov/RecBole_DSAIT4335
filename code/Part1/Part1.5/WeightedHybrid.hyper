@@ -1,2 +1,3 @@
-REGULARIZATION choice [0.0,0.001,0.008,0.01,0.1]
+model_names choice ['BPR,EASE','ItemKNN,LightGCN','BPR,EASE,LightGCN','all']
+REGULARIZATION choice [0.0,0.001,0.008,0.01,0.05]
 TOP_N choice [50,100,200]
